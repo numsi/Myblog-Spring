@@ -1,0 +1,35 @@
+{
+  "name" : "Like",
+  "originTableName" : "like",
+  "comment" : null,
+  "fullColumn" : [ {
+    "name" : "likeId",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "Int",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "likeBlog",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "Int",
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "likeUsername",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "ktShortType" : "Int",
+    "custom" : false,
+    "ext" : { }
+  } ],
+  "pkColumn" : null,
+  "otherColumn" : null,
+  "savePackageName" : "com.test.entity",
+  "savePath" : "./myblog-api/src/main/java/com/test/entity",
+  "saveModelName" : "myblog-api"
+}

@@ -1,0 +1,36 @@
+server:
+  port: 8001
+
+#mybatis配置
+mybatis:
+  type-aliases-package: com.test.springcloud.pojo
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+
+#spring配置
+spring:
+  application:
+    name: myblog-provider-8001
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource  #数据源
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/myblog?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+
+
+#Eureka配置   服务注册到哪里
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+#      defaultZone: http://eureka7001:7001/eureka/,http://eureka7003:7003/eureka/,http://eureka7002:7002/eureka/
+
+  instance:
+    instance-id: springcloud-provider-8001    #修改Eureka上默认描述信息
+    prefer-ip-address: true #true可以显示服务IP
+#info配置
+info:
+  app.name: numsi-blog
+  company.name: NUMSITEST

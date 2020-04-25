@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.entity.dao.FollowDao">
+
+    <resultMap id="BaseResultMap" type="com.test.entity.entity.Follow">
+        <!--@Table follow-->
+        <result property="followId" column="follow_id" jdbcType="INTEGER"/>
+        <result property="followFollowerid" column="follow_followerid" jdbcType="INTEGER"/>
+        <result property="followFanid" column="follow_fanid" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="BaseResultMap">
+        select
+          follow_id, follow_followerid, follow_fanid
+        from myblog.follow
+        where follow_id = #{followId}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="BaseResultMap">
+        select
+          follow_id, follow_followerid, follow_fanid
+        from myblog.follow
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAllByItem" resultMap="BaseResultMap">
+        select
+          follow_id, follow_followerid, follow_fanid
+        from myblog.follow
+        <where>
+            <if test="followId != null">
+                and follow_id = #{followId}
+            </if>
+            <if test="followFollowerid != null">
+                and follow_followerid = #{followFollowerid}
+            </if>
+            <if test="followFanid != null">
+                and follow_fanid = #{followFanid}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="followId" useGeneratedKeys="true">
+        insert into myblog.follow(follow_followerid, follow_fanid)
+        values (#{followFollowerid}, #{followFanid})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update myblog.follow
+        <set>
+            <if test="followFollowerid != null">
+                follow_followerid = #{followFollowerid},
+            </if>
+            <if test="followFanid != null">
+                follow_fanid = #{followFanid},
+            </if>
+        </set>
+        where follow_id = #{followId}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from myblog.follow where follow_id = #{followId}
+    </delete>
+     <!--查询所有follow-->
+    <select id="queryAll" resultMap="BaseResultMap">
+        select
+        follow_id, follow_followerid, follow_fanid        from follow
+    </select>
+</mapper>

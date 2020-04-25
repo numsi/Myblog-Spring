@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.dao.UserDao">
+
+    <resultMap id="BaseResultMap" type="com.test.entity.User">
+        <!--@Table user-->
+        <result property="userId" column="user_id" jdbcType="INTEGER"/>
+        <result property="userUsername" column="user_username" jdbcType="VARCHAR"/>
+        <result property="userPassword" column="user_password" jdbcType="VARCHAR"/>
+        <result property="userNickname" column="user_nickname" jdbcType="VARCHAR"/>
+        <result property="userCreattime" column="user_creattime" jdbcType="TIMESTAMP"/>
+        <result property="userGender" column="user_gender" jdbcType="INTEGER"/>
+        <result property="userBirth" column="user_birth" jdbcType="TIMESTAMP"/>
+        <result property="userEmail" column="user_email" jdbcType="VARCHAR"/>
+        <result property="userImgUrl" column="user_img_url" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="BaseResultMap">
+        select
+          user_id, user_username, user_password, user_nickname, user_creattime, user_gender, user_birth, user_email, user_img_url
+        from myblog.user
+        where user_id = #{userId}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="BaseResultMap">
+        select
+          user_id, user_username, user_password, user_nickname, user_creattime, user_gender, user_birth, user_email, user_img_url
+        from myblog.user
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAllByItem" resultMap="BaseResultMap">
+        select
+          user_id, user_username, user_password, user_nickname, user_creattime, user_gender, user_birth, user_email, user_img_url
+        from myblog.user
+        <where>
+            <if test="userId != null">
+                and user_id = #{userId}
+            </if>
+            <if test="userUsername != null and userUsername != ''">
+                and user_username = #{userUsername}
+            </if>
+            <if test="userPassword != null and userPassword != ''">
+                and user_password = #{userPassword}
+            </if>
+            <if test="userNickname != null and userNickname != ''">
+                and user_nickname = #{userNickname}
+            </if>
+            <if test="userCreattime != null">
+                and user_creattime = #{userCreattime}
+            </if>
+            <if test="userGender != null">
+                and user_gender = #{userGender}
+            </if>
+            <if test="userBirth != null">
+                and user_birth = #{userBirth}
+            </if>
+            <if test="userEmail != null and userEmail != ''">
+                and user_email = #{userEmail}
+            </if>
+            <if test="userImgUrl != null and userImgUrl != ''">
+                and user_img_url = #{userImgUrl}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="userId" useGeneratedKeys="true">
+        insert into myblog.user(user_username, user_password, user_nickname, user_creattime, user_gender, user_birth, user_email, user_img_url)
+        values (#{userUsername}, #{userPassword}, #{userNickname}, #{userCreattime}, #{userGender}, #{userBirth}, #{userEmail}, #{userImgUrl})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update myblog.user
+        <set>
+            <if test="userUsername != null and userUsername != ''">
+                user_username = #{userUsername},
+            </if>
+            <if test="userPassword != null and userPassword != ''">
+                user_password = #{userPassword},
+            </if>
+            <if test="userNickname != null and userNickname != ''">
+                user_nickname = #{userNickname},
+            </if>
+            <if test="userCreattime != null">
+                user_creattime = #{userCreattime},
+            </if>
+            <if test="userGender != null">
+                user_gender = #{userGender},
+            </if>
+            <if test="userBirth != null">
+                user_birth = #{userBirth},
+            </if>
+            <if test="userEmail != null and userEmail != ''">
+                user_email = #{userEmail},
+            </if>
+            <if test="userImgUrl != null and userImgUrl != ''">
+                user_img_url = #{userImgUrl},
+            </if>
+        </set>
+        where user_id = #{userId}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from myblog.user where user_id = #{userId}
+    </delete>
+     <!--查询所有user-->
+    <select id="queryAll" resultMap="BaseResultMap">
+        select
+        user_id, user_username, user_password, user_nickname, user_creattime, user_gender, user_birth, user_email, user_img_url        from user
+    </select>
+</mapper>

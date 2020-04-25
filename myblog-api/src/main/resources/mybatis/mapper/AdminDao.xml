@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.entity.dao.AdminDao">
+
+    <resultMap id="BaseResultMap" type="com.test.entity.entity.Admin">
+        <!--@Table admin-->
+        <result property="adminId" column="admin_id" jdbcType="INTEGER"/>
+        <result property="adminName" column="admin_name" jdbcType="VARCHAR"/>
+        <result property="adminPassword" column="admin_password" jdbcType="VARCHAR"/>
+        <result property="adminEmail" column="admin_email" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="BaseResultMap">
+        select
+          admin_id, admin_name, admin_password, admin_email
+        from myblog.admin
+        where admin_id = #{adminId}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="BaseResultMap">
+        select
+          admin_id, admin_name, admin_password, admin_email
+        from myblog.admin
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAllByItem" resultMap="BaseResultMap">
+        select
+          admin_id, admin_name, admin_password, admin_email
+        from myblog.admin
+        <where>
+            <if test="adminId != null">
+                and admin_id = #{adminId}
+            </if>
+            <if test="adminName != null and adminName != ''">
+                and admin_name = #{adminName}
+            </if>
+            <if test="adminPassword != null and adminPassword != ''">
+                and admin_password = #{adminPassword}
+            </if>
+            <if test="adminEmail != null and adminEmail != ''">
+                and admin_email = #{adminEmail}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="adminId" useGeneratedKeys="true">
+        insert into myblog.admin(admin_name, admin_password, admin_email)
+        values (#{adminName}, #{adminPassword}, #{adminEmail})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update myblog.admin
+        <set>
+            <if test="adminName != null and adminName != ''">
+                admin_name = #{adminName},
+            </if>
+            <if test="adminPassword != null and adminPassword != ''">
+                admin_password = #{adminPassword},
+            </if>
+            <if test="adminEmail != null and adminEmail != ''">
+                admin_email = #{adminEmail},
+            </if>
+        </set>
+        where admin_id = #{adminId}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from myblog.admin where admin_id = #{adminId}
+    </delete>
+     <!--查询所有admin-->
+    <select id="queryAll" resultMap="BaseResultMap">
+        select
+        admin_id, admin_name, admin_password, admin_email        from admin
+    </select>
+</mapper>
