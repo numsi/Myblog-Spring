@@ -11,6 +11,8 @@
         <module>myblog-api</module>
         <module>myblog-provider-8001</module>
         <module>myblog-eureka-7001</module>
+        <module>myblog-consumer-80</module>
+        <module>myblog-consumer-6001</module>
     </modules>
 
     <!--打包方式-->

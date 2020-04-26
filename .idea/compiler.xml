@@ -8,9 +8,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="myblog-api" />
+        <module name="myblog-consumer-6001" />
         <module name="myblog-eureka-7001" />
         <module name="myblog-provider-8001" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="myblog-consumer-80" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
