@@ -1297,7 +1297,7 @@
     <column id="308" parent="253" name="user_birth">
       <Position>7</Position>
       <Comment>用户生日</Comment>
-      <DataType>datetime|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="309" parent="253" name="user_email">
@@ -1312,31 +1312,43 @@
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="311" parent="253" name="PRIMARY">
+    <column id="311" parent="253" name="user_introduction">
+      <Position>10</Position>
+      <Comment>用户简介</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="312" parent="253" name="uer_abled">
+      <Position>11</Position>
+      <Comment>用户账号状态 0为正常 1为封禁</Comment>
+      <DataType>int(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="313" parent="253" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="312" parent="254" name="view_id">
+    <column id="314" parent="254" name="view_id">
       <Position>1</Position>
       <Comment>阅读id</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="313" parent="254" name="view_blog">
+    <column id="315" parent="254" name="view_blog">
       <Position>2</Position>
       <Comment>博文id</Comment>
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="314" parent="254" name="view_username">
+    <column id="316" parent="254" name="view_username">
       <Position>3</Position>
       <Comment>用户名</Comment>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="315" parent="254" name="PRIMARY">
+    <key id="317" parent="254" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>view_id</ColNames>
       <Primary>1</Primary>

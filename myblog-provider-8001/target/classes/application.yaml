@@ -34,3 +34,4 @@ eureka:
 info:
   app.name: numsi-blog
   company.name: NUMSITEST
+

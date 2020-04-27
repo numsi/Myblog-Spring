@@ -2,9 +2,13 @@ package com.test.controller;
 
 import com.test.entity.User;
 import com.test.service.UserService;
+import com.test.utils.Result;
+import com.test.utils.ResultFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.websocket.server.PathParam;
+import java.util.HashMap;
 import java.util.List;
 
 
@@ -20,9 +24,15 @@ public class UserController {
      * @return java.util.List<com.test.entity.User>  用户列表
      */
     @GetMapping("/user/list")
-    public List<User> getAll()
+    public Result getAll(@PathParam("offset") int offset,@PathParam("limit") int limit)
     {
-        return userService.queryAll();
+
+        List<User> users=userService.queryAllByLimit(offset,limit);
+        if(users==null||users.size()==0)
+        {
+            return ResultFactory.buildFailResult("暂无数据");
+        }
+        return ResultFactory.buildSuccessResult(users);
     }
 
 
@@ -33,9 +43,21 @@ public class UserController {
      * @return com.test.entity.User 返回新增的用户对象
      */
     @PostMapping("/user/add")
-    public User add(@RequestBody  User user)
+    public Result add(@RequestBody  User user)
     {
-        return userService.insert(user);
+        User temp=new User();
+        temp.setUserUsername(user.getUserUsername());
+        List<User> users=userService.queryAllByItem(temp);
+        if(users==null||users.size()==0)
+        {
+            User res=userService.insert(user);
+            if(res!=null)
+            {
+                return ResultFactory.buildSuccessResult(res);
+            }
+            return ResultFactory.buildFailResult("新增用户失败");
+        }
+        return ResultFactory.buildFailResult("已存在同名用户，请修改用户名");
     }
 
     /**
@@ -45,9 +67,15 @@ public class UserController {
      * @return com.test.entity.User 用户对象
      */
     @GetMapping("/user/get/{id}")
-    public User queryById(@PathVariable("id") int id)
+    public Result queryById(@PathVariable("id") int id)
     {
-        return userService.queryById(id);
+        User res=userService.queryById(id);
+
+        if(res!=null)
+        {
+            return ResultFactory.buildSuccessResult(res);
+        }
+        return ResultFactory.buildFailResult("找不到该用户");
     }
 
     /**
@@ -57,19 +85,17 @@ public class UserController {
      * @param password  密码
      * @return com.test.entity.User 如果存在则返回用户对象 否则返回null
      */
-    @GetMapping("/user/login")
-    public User queryByItem(String username,String password)
+    @PostMapping("/user/login")
+    public Result queryByItem(@RequestBody User user)
     {
-        User user=new User();
-        user.setUserUsername(username);
-        user.setUserPassword(password);
+
+
         List<User> users=userService.queryAllByItem(user);
-        try{
-            return users.get(0);
-        }catch (Exception e)
+        if(users==null||users.size()==0)
         {
-            return null;
+            return ResultFactory.buildFailResult("账号或密码错误，登录失败");
         }
+        return ResultFactory.buildSuccessResult(users.get(0));
 
     }
 
@@ -80,9 +106,9 @@ public class UserController {
      * @return com.test.entity.User 更新后的用户对象
      */
     @PostMapping("/user/update")
-    public User updateUser(@RequestBody  User user)
+    public Result updateUser(@RequestBody  User user)
     {
-        return userService.update(user);
+        return ResultFactory.buildSuccessResult(userService.update(user));
     }
 
     /**
@@ -92,8 +118,12 @@ public class UserController {
      * @return boolean 成功删除用户则返回
      */
     @GetMapping("/user/delete/{id}")
-    public boolean deleteUser(@PathVariable("id") int id)
+    public Result deleteUser(@PathVariable("id") int id)
     {
-        return userService.deleteById(id);
+        if(userService.deleteById(id))
+        {
+            return ResultFactory.buildSuccessResult(null);
+        }
+        return ResultFactory.buildFailResult("删除用户失败");
     }
 }
