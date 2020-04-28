@@ -2,31 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f6c80c2-3019-43ab-99aa-fc11dc0618dc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/FollowController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/controller/FollowProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/dao/FollowDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/dao/NoticeDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/service/FollowService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/service/NoticeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/service/impl/FollowServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/service/impl/NoticeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myblog-provider-8001/src/main/resources/mybatis/mapper/FollowDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myblog-provider-8001/src/main/resources/mybatis/mapper/NoticeDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myblog-provider-8002/myblog-provider-8002.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myblog-provider-8002/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/Provider_8002.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myblog-provider-8002/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/EasyCodeConfig/myblog-follow.json" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EasyCodeConfig/myblog-follow.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/EasyCodeConfig/myblog-notice.json" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EasyCodeConfig/myblog-notice.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8001/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8001/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/controller/UserProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8001/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8001/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8001/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8001/target/classes/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/controller/NoticeProvider.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/myblog-api/target/" />
@@ -131,6 +107,7 @@
         <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/UserController.java" />
         <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/FollowController.java" />
         <option value="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/controller/FollowProvider.java" />
+        <option value="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/controller/NoticeProvider.java" />
       </list>
     </option>
   </component>
@@ -350,7 +327,7 @@
       <workItem from="1587905158218" duration="1755000" />
       <workItem from="1587985485853" duration="4398000" />
       <workItem from="1587993801488" duration="4423000" />
-      <workItem from="1588072615221" duration="4209000" />
+      <workItem from="1588072615221" duration="5665000" />
     </task>
     <task id="LOCAL-00001" summary="log4j版本问题">
       <created>1587820252721</created>
@@ -380,11 +357,18 @@
       <option name="project" value="LOCAL" />
       <updated>1587998094559</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="关注相关接口和pagehelper使用">
+      <created>1588076908499</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1588076908499</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22393000" />
+    <option name="totallyTimeSpent" value="23849000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
@@ -437,10 +421,11 @@
     <MESSAGE value="log4j版本问题" />
     <MESSAGE value="微服务demo" />
     <MESSAGE value="用户模块接口完善" />
-    <option name="LAST_COMMIT_MESSAGE" value="用户模块接口完善" />
+    <MESSAGE value="关注相关接口" />
+    <MESSAGE value="关注相关接口和pagehelper使用" />
+    <option name="LAST_COMMIT_MESSAGE" value="关注相关接口和pagehelper使用" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/entity/Like.java" />
     <entry file="file://$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/entity/Notice.java" />
     <entry file="file://$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/entity/Tag.java" />
     <entry file="file://$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/entity/View.java" />
@@ -663,13 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/controller/UserProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
@@ -694,10 +672,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/controller/UserProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="122" column="30" selection-start-line="122" selection-start-column="30" selection-end-line="122" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/controller/FollowProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
-          <caret line="71" column="18" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
+          <caret line="71" column="29" lean-forward="true" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/controller/NoticeProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="79" column="33" selection-start-line="79" selection-start-column="33" selection-end-line="79" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
