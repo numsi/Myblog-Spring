@@ -1,5 +1,7 @@
 package com.test.controller;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.test.entity.User;
 import com.test.service.UserService;
 import com.test.utils.Result;
@@ -13,7 +15,7 @@ import java.util.List;
 
 
 @RestController
-public class UserController {
+public class UserProvider {
     @Autowired
     UserService userService;
 
@@ -24,15 +26,16 @@ public class UserController {
      * @return java.util.List<com.test.entity.User>  用户列表
      */
     @GetMapping("/user/list")
-    public Result getAll(@PathParam("offset") int offset,@PathParam("limit") int limit)
+    public Result getAll(@PathParam("pageNum") int pageNum,@PathParam("pageSize") int pageSize)
     {
-
-        List<User> users=userService.queryAllByLimit(offset,limit);
-        if(users==null||users.size()==0)
-        {
-            return ResultFactory.buildFailResult("暂无数据");
-        }
-        return ResultFactory.buildSuccessResult(users);
+        PageHelper.startPage(pageNum,pageSize);
+        List<User> users=userService.queryAll();
+//        if(users==null||users.size()==0)
+//        {
+//            return ResultFactory.buildFailResult("暂无数据");
+//        }
+        PageInfo<User> pageInfo = new PageInfo<>(users);
+        return ResultFactory.buildSuccessResult(pageInfo);
     }
 
 

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import javax.websocket.server.PathParam;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -26,10 +27,10 @@ public class UserController {
      * @return java.lang.String
      */
     @GetMapping("/user/list")
-    public String getAll(int offset,int limit)
+    public String getAll(@PathParam("pageNum") int pageNum, @PathParam("pageSize") int pageSize)
     {
 
-        return restTemplate.getForObject(REST_URL_PREFIX+"/user/list?offset="+offset+"&limit="+limit,String.class);
+        return restTemplate.getForObject(REST_URL_PREFIX+"/user/list?pageNum="+pageNum+"&pageSize="+pageSize,String.class);
     }
 
 

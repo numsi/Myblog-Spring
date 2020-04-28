@@ -11,6 +11,7 @@
         <module name="myblog-consumer-6001" />
         <module name="myblog-eureka-7001" />
         <module name="myblog-provider-8001" />
+        <module name="myblog-provider-8002" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

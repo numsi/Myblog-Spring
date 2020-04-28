@@ -13,6 +13,7 @@
         <module>myblog-eureka-7001</module>
         <module>myblog-consumer-80</module>
         <module>myblog-consumer-6001</module>
+        <module>myblog-provider-8002</module>
     </modules>
 
     <!--打包方式-->
@@ -28,6 +29,12 @@
 
     <dependencyManagement>
         <dependencies>
+            <!--分页助手-->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>1.2.12</version>
+            </dependency>
             <!--springcloud的依赖-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>

@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8002
 
 #mybatis配置
 mybatis:
@@ -35,9 +35,3 @@ info:
   app.name: numsi-blog
   company.name: NUMSITEST
 
-# 分页配置
-pagehelper:
-  helper-dialect: mysql
-  reasonable: true
-  support-methods-arguments: true
-  params: count=countSql
