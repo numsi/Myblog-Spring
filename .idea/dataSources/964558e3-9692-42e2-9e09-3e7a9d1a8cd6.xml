@@ -1184,13 +1184,13 @@
     </column>
     <column id="290" parent="250" name="like_blog">
       <Position>2</Position>
-      <Comment>点赞内容</Comment>
+      <Comment>博文id</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="291" parent="250" name="like_username">
+    <column id="291" parent="250" name="like_user">
       <Position>3</Position>
-      <Comment>点赞作者</Comment>
+      <Comment>用户ID</Comment>
       <DataType>int(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -1342,10 +1342,10 @@
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="316" parent="254" name="view_username">
+    <column id="316" parent="254" name="view_user">
       <Position>3</Position>
-      <Comment>用户名</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <Comment>用户id</Comment>
+      <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <key id="317" parent="254" name="PRIMARY">

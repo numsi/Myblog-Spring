@@ -14,6 +14,7 @@
         <module>myblog-consumer-80</module>
         <module>myblog-consumer-6001</module>
         <module>myblog-provider-8002</module>
+        <module>myblog-provider-8003</module>
     </modules>
 
     <!--打包方式-->

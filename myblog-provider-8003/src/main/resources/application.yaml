@@ -1,5 +1,5 @@
 server:
-  port: 8002
+  port: 8003
 
 #mybatis配置
 mybatis:
@@ -11,7 +11,7 @@ mybatis:
 #spring配置
 spring:
   application:
-    name: myblog-provider-8002
+    name: myblog-provider-8003
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource  #数据源
     driver-class-name: org.gjt.mm.mysql.Driver
@@ -28,7 +28,7 @@ eureka:
 #      defaultZone: http://eureka7001:7001/eureka/,http://eureka7003:7003/eureka/,http://eureka7002:7002/eureka/
 
   instance:
-    instance-id: springcloud-provider-8002    #修改Eureka上默认描述信息
+    instance-id: springcloud-provider-8003    #修改Eureka上默认描述信息
     prefer-ip-address: true #true可以显示服务IP
 #info配置
 info:

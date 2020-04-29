@@ -19,7 +19,7 @@
     "custom" : false,
     "ext" : { }
   }, {
-    "name" : "likeUsername",
+    "name" : "likeUser",
     "comment" : null,
     "type" : null,
     "shortType" : null,
@@ -29,7 +29,7 @@
   } ],
   "pkColumn" : null,
   "otherColumn" : null,
-  "savePackageName" : "com.test.entity",
-  "savePath" : "./myblog-api/src/main/java/com/test/entity",
+  "savePackageName" : "com.test",
+  "savePath" : "./myblog-api/src/main/java/com/test",
   "saveModelName" : "myblog-api"
 }

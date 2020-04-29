@@ -1,24 +1,15 @@
 package com.test.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.experimental.Accessors;
-
 import java.io.Serializable;
 
 /**
  * (View)实体类
  *
  * @author numsi
- * @since 2020-04-25 19:28:34
+ * @since 2020-04-29 21:55:31
  */
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Accessors(chain = true)//链式写法
 public class View implements Serializable {
-    private static final long serialVersionUID = -69673166521819935L;
+    private static final long serialVersionUID = 277003159969918237L;
     /**
     * 阅读id
     */
@@ -28,10 +19,33 @@ public class View implements Serializable {
     */
     private Integer viewBlog;
     /**
-    * 用户名
+    * 用户id
     */
-    private String viewUsername;
+    private Integer viewUser;
 
 
+    public Integer getViewId() {
+        return viewId;
+    }
+
+    public void setViewId(Integer viewId) {
+        this.viewId = viewId;
+    }
+
+    public Integer getViewBlog() {
+        return viewBlog;
+    }
+
+    public void setViewBlog(Integer viewBlog) {
+        this.viewBlog = viewBlog;
+    }
+
+    public Integer getViewUser() {
+        return viewUser;
+    }
+
+    public void setViewUser(Integer viewUser) {
+        this.viewUser = viewUser;
+    }
 
 }

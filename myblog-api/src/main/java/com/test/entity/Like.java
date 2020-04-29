@@ -1,38 +1,51 @@
 package com.test.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.experimental.Accessors;
-
 import java.io.Serializable;
 
 /**
  * (Like)实体类
  *
  * @author numsi
- * @since 2020-04-25 19:28:34
+ * @since 2020-04-29 21:55:20
  */
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Accessors(chain = true)//链式写法
 public class Like implements Serializable {
-    private static final long serialVersionUID = -25638527102417960L;
+    private static final long serialVersionUID = 296713085080875025L;
     /**
     * 点赞id
     */
     private Integer likeId;
     /**
-    * 点赞内容
+    * 博文id
     */
     private Integer likeBlog;
     /**
-    * 点赞作者
+    * 用户ID
     */
-    private Integer likeUsername;
+    private Integer likeUser;
 
 
+    public Integer getLikeId() {
+        return likeId;
+    }
 
+    public void setLikeId(Integer likeId) {
+        this.likeId = likeId;
+    }
+
+    public Integer getLikeBlog() {
+        return likeBlog;
+    }
+
+    public void setLikeBlog(Integer likeBlog) {
+        this.likeBlog = likeBlog;
+    }
+
+    public Integer getLikeUser() {
+        return likeUser;
+    }
+
+    public void setLikeUser(Integer likeUser) {
+        this.likeUser = likeUser;
+    }
 
 }

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.dao.CommentDao">
+
+    <resultMap id="BaseResultMap" type="com.test.entity.Comment">
+        <!--@Table comment-->
+        <result property="commentId" column="comment_id" jdbcType="INTEGER"/>
+        <result property="commentCreattime" column="comment_creattime" jdbcType="TIMESTAMP"/>
+        <result property="commentUpdate" column="comment_update" jdbcType="TIMESTAMP"/>
+        <result property="commentContent" column="comment_content" jdbcType="VARCHAR"/>
+        <result property="commentAuthor" column="comment_author" jdbcType="INTEGER"/>
+        <result property="commentBlog" column="comment_blog" jdbcType="INTEGER"/>
+        <result property="commentParent" column="comment_parent" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="BaseResultMap">
+        select
+          comment_id, comment_creattime, comment_update, comment_content, comment_author, comment_blog, comment_parent
+        from myblog.comment
+        where comment_id = #{commentId}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="BaseResultMap">
+        select
+          comment_id, comment_creattime, comment_update, comment_content, comment_author, comment_blog, comment_parent
+        from myblog.comment
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAllByItem" resultMap="BaseResultMap">
+        select
+          comment_id, comment_creattime, comment_update, comment_content, comment_author, comment_blog, comment_parent
+        from myblog.comment
+        <where>
+            <if test="commentId != null">
+                and comment_id = #{commentId}
+            </if>
+            <if test="commentCreattime != null">
+                and comment_creattime = #{commentCreattime}
+            </if>
+            <if test="commentUpdate != null">
+                and comment_update = #{commentUpdate}
+            </if>
+            <if test="commentContent != null and commentContent != ''">
+                and comment_content = #{commentContent}
+            </if>
+            <if test="commentAuthor != null">
+                and comment_author = #{commentAuthor}
+            </if>
+            <if test="commentBlog != null">
+                and comment_blog = #{commentBlog}
+            </if>
+            <if test="commentParent != null">
+                and comment_parent = #{commentParent}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="commentId" useGeneratedKeys="true">
+        insert into myblog.comment(comment_creattime, comment_update, comment_content, comment_author, comment_blog, comment_parent)
+        values (#{commentCreattime}, #{commentUpdate}, #{commentContent}, #{commentAuthor}, #{commentBlog}, #{commentParent})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update myblog.comment
+        <set>
+            <if test="commentCreattime != null">
+                comment_creattime = #{commentCreattime},
+            </if>
+            <if test="commentUpdate != null">
+                comment_update = #{commentUpdate},
+            </if>
+            <if test="commentContent != null and commentContent != ''">
+                comment_content = #{commentContent},
+            </if>
+            <if test="commentAuthor != null">
+                comment_author = #{commentAuthor},
+            </if>
+            <if test="commentBlog != null">
+                comment_blog = #{commentBlog},
+            </if>
+            <if test="commentParent != null">
+                comment_parent = #{commentParent},
+            </if>
+        </set>
+        where comment_id = #{commentId}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from myblog.comment where comment_id = #{commentId}
+    </delete>
+     <!--查询所有comment-->
+    <select id="queryAll" resultMap="BaseResultMap">
+        select
+        comment_id, comment_creattime, comment_update, comment_content, comment_author, comment_blog, comment_parent        from comment
+    </select>
+</mapper>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.dao.TagDao">
+
+    <resultMap id="BaseResultMap" type="com.test.entity.Tag">
+        <!--@Table tag-->
+        <result property="tagId" column="tag_id" jdbcType="INTEGER"/>
+        <result property="tagName" column="tag_name" jdbcType="VARCHAR"/>
+        <result property="tagAuthor" column="tag_author" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="BaseResultMap">
+        select
+          tag_id, tag_name, tag_author
+        from myblog.tag
+        where tag_id = #{tagId}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="BaseResultMap">
+        select
+          tag_id, tag_name, tag_author
+        from myblog.tag
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAllByItem" resultMap="BaseResultMap">
+        select
+          tag_id, tag_name, tag_author
+        from myblog.tag
+        <where>
+            <if test="tagId != null">
+                and tag_id = #{tagId}
+            </if>
+            <if test="tagName != null and tagName != ''">
+                and tag_name = #{tagName}
+            </if>
+            <if test="tagAuthor != null">
+                and tag_author = #{tagAuthor}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="tagId" useGeneratedKeys="true">
+        insert into myblog.tag(tag_name, tag_author)
+        values (#{tagName}, #{tagAuthor})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update myblog.tag
+        <set>
+            <if test="tagName != null and tagName != ''">
+                tag_name = #{tagName},
+            </if>
+            <if test="tagAuthor != null">
+                tag_author = #{tagAuthor},
+            </if>
+        </set>
+        where tag_id = #{tagId}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from myblog.tag where tag_id = #{tagId}
+    </delete>
+     <!--查询所有tag-->
+    <select id="queryAll" resultMap="BaseResultMap">
+        select
+        tag_id, tag_name, tag_author        from tag
+    </select>
+</mapper>
