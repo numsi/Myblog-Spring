@@ -12,7 +12,7 @@ import java.util.List;
  * (Blog)表服务实现类
  *
  * @author numsi
- * @since 2020-04-29 20:22:26
+ * @since 2020-05-01 19:37:21
  */
 @Service("blogService")
 public class BlogServiceImpl implements BlogService {
@@ -80,7 +80,7 @@ public class BlogServiceImpl implements BlogService {
             /**
      * @Description 查询全部数据
      * @author numsi
-     * @date 2020-04-29 20:22:26
+     * @date 2020-05-01 19:37:21
      * 分页使用MyBatis的插件实现
      * @return 对象列表
      */

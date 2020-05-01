@@ -39,24 +39,5 @@ public class ViewProvider {
         return ResultFactory.buildSuccessResult(null);
     }
 
-    /**
-     * description: 根据博文ID获取博文点赞数
-     *
-     * @param id 博文ID
-     * @return com.test.utils.Result
-     */
-    @GetMapping("/like/getBlog/{id}")
-    public Result getUser(@PathVariable("id") int id)
-    {
-        View view=new View();
-        view.setViewBlog(id);
-        List<View> views = viewService.queryAllByItem(view);
-        if(views==null||views.size()==0)
-        {
-            return ResultFactory.buildSuccessResult(0);
-        }
-        return ResultFactory.buildSuccessResult(views.size());
-    }
-
 
 }

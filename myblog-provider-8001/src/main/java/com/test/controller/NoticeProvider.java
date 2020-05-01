@@ -53,10 +53,10 @@ public class NoticeProvider {
      * @param nid
      * @return com.test.utils.Result
      */
-    @GetMapping("/notice/delete/{nid}")
-    public Result deleteNotice(@PathVariable("nid") int nid)
+    @GetMapping("/notice/delete/{id}")
+    public Result deleteNotice(@PathVariable("id") int id)
     {
-        return ResultFactory.buildSuccessResult(noticeService.deleteById(nid));
+        return ResultFactory.buildSuccessResult(noticeService.deleteById(id));
     }
 
     /**
@@ -79,13 +79,13 @@ public class NoticeProvider {
     /**
      * description: 更新通知状态  更新为已读
      *
-     * @param nid
+     * @param id
      * @return com.test.utils.Result
      */
-    @GetMapping("/notice/update/{nid}")
-    public Result updateNotice(@PathVariable("nid") int nid)
+    @GetMapping("/notice/update/{id}")
+    public Result updateNotice(@PathVariable("id") int id)
     {
-        Notice notice=noticeService.queryById(nid);
+        Notice notice=noticeService.queryById(id);
         notice.setNoticeState(1);
         return ResultFactory.buildSuccessResult(noticeService.update(notice));
     }

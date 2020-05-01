@@ -1,25 +1,16 @@
 package com.test.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.experimental.Accessors;
-
-import java.io.Serializable;
 import java.util.Date;
+import java.io.Serializable;
 
 /**
  * (Blog)实体类
  *
  * @author numsi
- * @since 2020-04-25 19:28:34
+ * @since 2020-05-01 19:33:17
  */
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Accessors(chain = true)//链式写法
 public class Blog implements Serializable {
-    private static final long serialVersionUID = 215991603904711870L;
+    private static final long serialVersionUID = -77544941011321861L;
     /**
     * 博文ID
     */
@@ -53,13 +44,13 @@ public class Blog implements Serializable {
     */
     private Integer blogReleaseType;
     /**
-    * 博文分类
+    * 博文分类ID
     */
-    private String blogKind;
+    private Integer blogKind;
     /**
-    * 博文标签
+    * 博文标签ID
     */
-    private String blogTags;
+    private Integer blogTag;
     /**
     * 被举报次数
     */
@@ -74,5 +65,108 @@ public class Blog implements Serializable {
     private String blogCover;
 
 
+    public Integer getBlogId() {
+        return blogId;
+    }
+
+    public void setBlogId(Integer blogId) {
+        this.blogId = blogId;
+    }
+
+    public String getBlogTitle() {
+        return blogTitle;
+    }
+
+    public void setBlogTitle(String blogTitle) {
+        this.blogTitle = blogTitle;
+    }
+
+    public Date getBlogCreattime() {
+        return blogCreattime;
+    }
+
+    public void setBlogCreattime(Date blogCreattime) {
+        this.blogCreattime = blogCreattime;
+    }
+
+    public Date getBlogUpdatetime() {
+        return blogUpdatetime;
+    }
+
+    public void setBlogUpdatetime(Date blogUpdatetime) {
+        this.blogUpdatetime = blogUpdatetime;
+    }
+
+    public Integer getBlogAuthor() {
+        return blogAuthor;
+    }
+
+    public void setBlogAuthor(Integer blogAuthor) {
+        this.blogAuthor = blogAuthor;
+    }
+
+    public String getBlogContentHtml() {
+        return blogContentHtml;
+    }
+
+    public void setBlogContentHtml(String blogContentHtml) {
+        this.blogContentHtml = blogContentHtml;
+    }
+
+    public String getBlogContentMd() {
+        return blogContentMd;
+    }
+
+    public void setBlogContentMd(String blogContentMd) {
+        this.blogContentMd = blogContentMd;
+    }
+
+    public Integer getBlogReleaseType() {
+        return blogReleaseType;
+    }
+
+    public void setBlogReleaseType(Integer blogReleaseType) {
+        this.blogReleaseType = blogReleaseType;
+    }
+
+    public Integer getBlogKind() {
+        return blogKind;
+    }
+
+    public void setBlogKind(Integer blogKind) {
+        this.blogKind = blogKind;
+    }
+
+    public Integer getBlogTag() {
+        return blogTag;
+    }
+
+    public void setBlogTag(Integer blogTag) {
+        this.blogTag = blogTag;
+    }
+
+    public Integer getBlogReport() {
+        return blogReport;
+    }
+
+    public void setBlogReport(Integer blogReport) {
+        this.blogReport = blogReport;
+    }
+
+    public String getBlogAbstract() {
+        return blogAbstract;
+    }
+
+    public void setBlogAbstract(String blogAbstract) {
+        this.blogAbstract = blogAbstract;
+    }
+
+    public String getBlogCover() {
+        return blogCover;
+    }
+
+    public void setBlogCover(String blogCover) {
+        this.blogCover = blogCover;
+    }
 
 }

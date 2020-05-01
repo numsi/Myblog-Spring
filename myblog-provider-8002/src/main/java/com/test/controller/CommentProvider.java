@@ -61,7 +61,7 @@ public class CommentProvider {
     }
 
     /**
-     * description: 获得某一具体评论信心
+     * description: 获得某一具体评论信息
      *
      * @param id  评论ID
      * @return com.test.utils.Result
@@ -86,8 +86,8 @@ public class CommentProvider {
      * @param pageSize
      * @return com.test.utils.Result
      */
-    @GetMapping("/comment/getAll")
-    public Result getAll(@PathParam("id") int id, @PathParam("pageNum") int pageNum, @PathParam("pageSize") int pageSize)
+    @GetMapping("/comment/listByUser")
+    public Result listByUser(@PathParam("id") int id, @PathParam("pageNum") int pageNum, @PathParam("pageSize") int pageSize)
     {
         PageHelper.startPage(pageNum,pageSize);
         Comment comment=new Comment();
@@ -107,8 +107,8 @@ public class CommentProvider {
      * @param pageSize
      * @return com.test.utils.Result
      */
-    @GetMapping("/comment/list")
-    public Result getOne(@PathParam("id") int id, @PathParam("pageNum") int pageNum, @PathParam("pageSize") int pageSize)
+    @GetMapping("/comment/listByBlog")
+    public Result listByBlog(@PathParam("id") int id, @PathParam("pageNum") int pageNum, @PathParam("pageSize") int pageSize)
     {
         PageHelper.startPage(pageNum,pageSize);
         Comment comment=new Comment();

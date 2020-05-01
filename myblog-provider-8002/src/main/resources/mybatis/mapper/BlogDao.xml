@@ -12,8 +12,8 @@
         <result property="blogContentHtml" column="blog_content_html" jdbcType="VARCHAR"/>
         <result property="blogContentMd" column="blog_content_md" jdbcType="VARCHAR"/>
         <result property="blogReleaseType" column="blog_release_type" jdbcType="INTEGER"/>
-        <result property="blogKind" column="blog_kind" jdbcType="VARCHAR"/>
-        <result property="blogTags" column="blog_tags" jdbcType="VARCHAR"/>
+        <result property="blogKind" column="blog_kind" jdbcType="INTEGER"/>
+        <result property="blogTag" column="blog_tag" jdbcType="INTEGER"/>
         <result property="blogReport" column="blog_report" jdbcType="INTEGER"/>
         <result property="blogAbstract" column="blog_abstract" jdbcType="VARCHAR"/>
         <result property="blogCover" column="blog_cover" jdbcType="VARCHAR"/>
@@ -22,7 +22,7 @@
     <!--查询单个-->
     <select id="queryById" resultMap="BaseResultMap">
         select
-          blog_id, blog_title, blog_creattime, blog_updatetime, blog_author, blog_content_html, blog_content_md, blog_release_type, blog_kind, blog_tags, blog_report, blog_abstract, blog_cover
+          blog_id, blog_title, blog_creattime, blog_updatetime, blog_author, blog_content_html, blog_content_md, blog_release_type, blog_kind, blog_tag, blog_report, blog_abstract, blog_cover
         from myblog.blog
         where blog_id = #{blogId}
     </select>
@@ -30,7 +30,7 @@
     <!--查询指定行数据-->
     <select id="queryAllByLimit" resultMap="BaseResultMap">
         select
-          blog_id, blog_title, blog_creattime, blog_updatetime, blog_author, blog_content_html, blog_content_md, blog_release_type, blog_kind, blog_tags, blog_report, blog_abstract, blog_cover
+          blog_id, blog_title, blog_creattime, blog_updatetime, blog_author, blog_content_html, blog_content_md, blog_release_type, blog_kind, blog_tag, blog_report, blog_abstract, blog_cover
         from myblog.blog
         limit #{offset}, #{limit}
     </select>
@@ -38,7 +38,7 @@
     <!--通过实体作为筛选条件查询-->
     <select id="queryAllByItem" resultMap="BaseResultMap">
         select
-          blog_id, blog_title, blog_creattime, blog_updatetime, blog_author, blog_content_html, blog_content_md, blog_release_type, blog_kind, blog_tags, blog_report, blog_abstract, blog_cover
+          blog_id, blog_title, blog_creattime, blog_updatetime, blog_author, blog_content_html, blog_content_md, blog_release_type, blog_kind, blog_tag, blog_report, blog_abstract, blog_cover
         from myblog.blog
         <where>
             <if test="blogId != null">
@@ -65,11 +65,11 @@
             <if test="blogReleaseType != null">
                 and blog_release_type = #{blogReleaseType}
             </if>
-            <if test="blogKind != null and blogKind != ''">
+            <if test="blogKind != null">
                 and blog_kind = #{blogKind}
             </if>
-            <if test="blogTags != null and blogTags != ''">
-                and blog_tags = #{blogTags}
+            <if test="blogTag != null">
+                and blog_tag = #{blogTag}
             </if>
             <if test="blogReport != null">
                 and blog_report = #{blogReport}
@@ -85,8 +85,8 @@
 
     <!--新增所有列-->
     <insert id="insert" keyProperty="blogId" useGeneratedKeys="true">
-        insert into myblog.blog(blog_title, blog_creattime, blog_updatetime, blog_author, blog_content_html, blog_content_md, blog_release_type, blog_kind, blog_tags, blog_report, blog_abstract, blog_cover)
-        values (#{blogTitle}, #{blogCreattime}, #{blogUpdatetime}, #{blogAuthor}, #{blogContentHtml}, #{blogContentMd}, #{blogReleaseType}, #{blogKind}, #{blogTags}, #{blogReport}, #{blogAbstract}, #{blogCover})
+        insert into myblog.blog(blog_title, blog_creattime, blog_updatetime, blog_author, blog_content_html, blog_content_md, blog_release_type, blog_kind, blog_tag, blog_report, blog_abstract, blog_cover)
+        values (#{blogTitle}, #{blogCreattime}, #{blogUpdatetime}, #{blogAuthor}, #{blogContentHtml}, #{blogContentMd}, #{blogReleaseType}, #{blogKind}, #{blogTag}, #{blogReport}, #{blogAbstract}, #{blogCover})
     </insert>
 
     <!--通过主键修改数据-->
@@ -114,11 +114,11 @@
             <if test="blogReleaseType != null">
                 blog_release_type = #{blogReleaseType},
             </if>
-            <if test="blogKind != null and blogKind != ''">
+            <if test="blogKind != null">
                 blog_kind = #{blogKind},
             </if>
-            <if test="blogTags != null and blogTags != ''">
-                blog_tags = #{blogTags},
+            <if test="blogTag != null">
+                blog_tag = #{blogTag},
             </if>
             <if test="blogReport != null">
                 blog_report = #{blogReport},
@@ -140,6 +140,6 @@
      <!--查询所有blog-->
     <select id="queryAll" resultMap="BaseResultMap">
         select
-        blog_id, blog_title, blog_creattime, blog_updatetime, blog_author, blog_content_html, blog_content_md, blog_release_type, blog_kind, blog_tags, blog_report, blog_abstract, blog_cover        from blog
+        blog_id, blog_title, blog_creattime, blog_updatetime, blog_author, blog_content_html, blog_content_md, blog_release_type, blog_kind, blog_tag, blog_report, blog_abstract, blog_cover        from blog
     </select>
 </mapper>

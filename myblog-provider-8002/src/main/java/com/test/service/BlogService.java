@@ -7,7 +7,7 @@ import java.util.List;
  * (Blog)表服务接口
  *
  * @author numsi
- * @since 2020-04-29 20:22:26
+ * @since 2020-05-01 19:37:20
  */
 public interface BlogService {
 
@@ -55,7 +55,7 @@ public interface BlogService {
        /**
      * @Description 查询全部数据
      * @author numsi
-     * @date 2020-04-29 20:22:26
+     * @date 2020-05-01 19:37:20
      * 分页使用MyBatis的插件实现
      * @return 对象列表
      */

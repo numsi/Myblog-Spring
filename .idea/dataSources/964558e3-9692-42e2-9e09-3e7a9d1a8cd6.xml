@@ -1049,14 +1049,14 @@
     </column>
     <column id="268" parent="246" name="blog_kind">
       <Position>9</Position>
-      <Comment>博文分类</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <Comment>博文分类ID</Comment>
+      <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="269" parent="246" name="blog_tags">
+    <column id="269" parent="246" name="blog_tag">
       <Position>10</Position>
-      <Comment>博文标签</Comment>
-      <DataType>varchar(255)|0s</DataType>
+      <Comment>博文标签ID</Comment>
+      <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="270" parent="246" name="blog_report">

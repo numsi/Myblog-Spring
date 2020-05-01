@@ -1,6 +1,7 @@
 package com.test.controller;
 
 import com.test.entity.User;
+import com.test.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,14 +24,14 @@ public class UserController {
     /**
      * description:  获得所有用户信息  分页
      *
-     * @param  偏移值和每页限制
+     * @param  页码及每页的限制
      * @return java.lang.String
      */
     @GetMapping("/user/list")
-    public String getAll(@PathParam("pageNum") int pageNum, @PathParam("pageSize") int pageSize)
+    public Result getAll(@PathParam("pageNum") int pageNum, @PathParam("pageSize") int pageSize)
     {
 
-        return restTemplate.getForObject(REST_URL_PREFIX+"/user/list?pageNum="+pageNum+"&pageSize="+pageSize,String.class);
+        return restTemplate.getForObject(REST_URL_PREFIX+"/user/list?pageNum="+pageNum+"&pageSize="+pageSize,Result.class);
     }
 
 
@@ -41,9 +42,9 @@ public class UserController {
      * @return java.lang.String
      */
     @PostMapping("/user/add")
-    public String add(User user)
+    public Result add(User user)
     {
-        return restTemplate.postForObject(REST_URL_PREFIX+"/user/add",user,String.class);
+        return restTemplate.postForObject(REST_URL_PREFIX+"/user/add",user,Result.class);
     }
 
     /**
@@ -53,9 +54,9 @@ public class UserController {
      * @return java.lang.String
      */
     @GetMapping("/user/get/{id}")
-    public String queryById(@PathVariable int id)
+    public Result queryById(@PathVariable int id)
     {
-        return restTemplate.getForObject(REST_URL_PREFIX+"/user/get/"+id,String.class);
+        return restTemplate.getForObject(REST_URL_PREFIX+"/user/get/"+id,Result.class);
     }
 
     /**
@@ -65,10 +66,10 @@ public class UserController {
      * @return java.lang.String
      */
     @PostMapping("/user/login")
-    public String queryByItem(User user)
+    public Result queryByItem(User user)
     {
 
-        return restTemplate.postForObject(REST_URL_PREFIX+"/user/login",user,String.class);
+        return restTemplate.postForObject(REST_URL_PREFIX+"/user/login",user,Result.class);
     }
 
     /**
@@ -78,14 +79,20 @@ public class UserController {
      * @return java.lang.String
      */
     @PostMapping("/user/update")
-    public String updateUser( User user)
+    public Result updateUser( User user)
     {
-        return restTemplate.postForObject(REST_URL_PREFIX+"/user/update",user,String.class);
+        return restTemplate.postForObject(REST_URL_PREFIX+"/user/update",user,Result.class);
     }
 
+    /**
+     * description: 删除某一用户信息
+     *
+     * @param id
+     * @return com.test.utils.Result
+     */
     @GetMapping("/user/delete/{id}")
-    public String deleteUser(@PathVariable("id") int id)
+    public Result deleteUser(@PathVariable("id") int id)
     {
-        return restTemplate.getForObject(REST_URL_PREFIX+"/user/delete/"+id,String.class);
+        return restTemplate.getForObject(REST_URL_PREFIX+"/user/delete/"+id,Result.class);
     }
 }

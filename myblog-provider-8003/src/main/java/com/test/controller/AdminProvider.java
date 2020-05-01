@@ -6,6 +6,7 @@ import com.test.utils.Result;
 import com.test.utils.ResultFactory;
 import org.hibernate.validator.constraints.EAN;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -58,5 +59,18 @@ public class AdminProvider {
             return ResultFactory.buildFailResult("更新失败!");
         }
         return ResultFactory.buildSuccessResult(res);
+    }
+
+    /**
+     * description: 获取管理员的邮箱地址
+     *
+     * @param
+     * @return com.test.utils.Result
+     */
+    @GetMapping("/admin/email")
+    public Result adminEmail()
+    {
+        List<Admin> admins = adminService.queryAll();
+        return ResultFactory.buildSuccessResult(admins.get(1).getAdminEmail());
     }
 }

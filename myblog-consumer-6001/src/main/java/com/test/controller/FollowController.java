@@ -1,6 +1,7 @@
 package com.test.controller;
 
 import com.test.entity.Follow;
+import com.test.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -29,10 +30,10 @@ public class FollowController {
      * @return java.lang.String
      */
     @GetMapping("/follow/get")
-    public String getAll(@PathParam("id") int id,@PathParam("pageNum") int pageNum,@PathParam("pageSize") int pageSize)
+    public Result getAll(@PathParam("id") int id, @PathParam("pageNum") int pageNum, @PathParam("pageSize") int pageSize)
     {
 
-        return restTemplate.getForObject(REST_URL_PREFIX+"/follow/get?id="+id+"&pageNum="+pageNum+"&pageSize="+pageSize,String.class);
+        return restTemplate.getForObject(REST_URL_PREFIX+"/follow/get?id="+id+"&pageNum="+pageNum+"&pageSize="+pageSize,Result.class);
     }
 
     /**
@@ -42,15 +43,15 @@ public class FollowController {
      * @return java.lang.String
      */
     @PostMapping("/follow/add")
-    public String followAdd(Follow follow)
+    public Result followAdd(Follow follow)
     {
-        return restTemplate.postForObject(REST_URL_PREFIX+"/follow/add",follow,String.class);
+        return restTemplate.postForObject(REST_URL_PREFIX+"/follow/add",follow,Result.class);
     }
 
     @GetMapping("/follow/delete")
-    public String deleteFollow(@PathParam("user") int user, @PathParam("followed") int followed)
+    public Result deleteFollow(@PathParam("user") int user, @PathParam("followed") int followed)
     {
-        return restTemplate.getForObject(REST_URL_PREFIX+"/follow/delete?user="+user+"&followed="+followed,String.class);
+        return restTemplate.getForObject(REST_URL_PREFIX+"/follow/delete?user="+user+"&followed="+followed,Result.class);
     }
 
 }

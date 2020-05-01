@@ -71,15 +71,15 @@
     "comment" : null,
     "type" : null,
     "shortType" : null,
-    "ktShortType" : "String",
+    "ktShortType" : "Int",
     "custom" : false,
     "ext" : { }
   }, {
-    "name" : "blogTags",
+    "name" : "blogTag",
     "comment" : null,
     "type" : null,
     "shortType" : null,
-    "ktShortType" : "String",
+    "ktShortType" : "Int",
     "custom" : false,
     "ext" : { }
   }, {

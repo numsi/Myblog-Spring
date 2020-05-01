@@ -69,7 +69,7 @@ public class BlogProvider {
     @GetMapping("/blog/get/{id}")
     public Result getOne(@PathVariable("id") int id)
     {
-        Blog res=blogService.queryById(id);
+        Blog res = blogService.queryById(id);
         if(res==null)
         {
             return ResultFactory.buildFailResult("获取博文失败");
@@ -85,8 +85,8 @@ public class BlogProvider {
      * @param pageSize
      * @return com.test.utils.Result
      */
-    @GetMapping("/blog/getAll")
-    public Result getAll(@PathParam("id") int id, @PathParam("pageNum") int pageNum, @PathParam("pageSize") int pageSize)
+    @GetMapping("/blog/listByUser")
+    public Result listByUser(@PathParam("id") int id, @PathParam("pageNum") int pageNum, @PathParam("pageSize") int pageSize)
     {
         PageHelper.startPage(pageNum,pageSize);
         Blog blog=new Blog();
@@ -97,17 +97,50 @@ public class BlogProvider {
 
     }
 
+
+
     /**
-     * description: 获得全部的博文信息
+     * description: 根据标签ID获取所有的博文且分页
      *
-     * @param
+     * @param id
+     * @param pageNum
+     * @param pageSize
      * @return com.test.utils.Result
      */
-    @GetMapping("/blog/list")
-    public Result list()
+    @GetMapping("/blog/listByTag")
+    public Result listByTag(@PathParam("id") int id, @PathParam("pageNum") int pageNum, @PathParam("pageSize") int pageSize)
     {
-        List<Blog> res = blogService.queryAll();
-        return ResultFactory.buildSuccessResult(res);
+        PageHelper.startPage(pageNum,pageSize);
+        Blog blog=new Blog();
+        blog.setBlogTag(id);
+        List<Blog> blogs = blogService.queryAllByItem(blog);
+        PageInfo<Blog> pageInfo =new PageInfo<>(blogs);
+        return ResultFactory.buildSuccessResult(pageInfo);
+
+    }
+
+    /**
+     * description: 根据博文的分类获取所有此分类的博文且分页 若分类ID为-1则为获取所有的博文
+     *
+     * @param id
+     * @param pageNum
+     * @param pageSize
+     * @return com.test.utils.Result
+     */
+    @GetMapping("/blog/listByKind")
+    public Result listByKind(@PathParam("id") int id, @PathParam("pageNum") int pageNum, @PathParam("pageSize") int pageSize)
+    {
+        if(id==-1)
+        {
+            return ResultFactory.buildSuccessResult(blogService.queryAll());
+        }
+        PageHelper.startPage(pageNum,pageSize);
+        Blog blog=new Blog();
+        blog.setBlogKind(id);
+        List<Blog> blogs = blogService.queryAllByItem(blog);
+        PageInfo<Blog> pageInfo =new PageInfo<>(blogs);
+        return ResultFactory.buildSuccessResult(pageInfo);
+
     }
 
     /**

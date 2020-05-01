@@ -98,6 +98,10 @@ public class UserProvider {
         {
             return ResultFactory.buildFailResult("账号或密码错误，登录失败");
         }
+        if(users.get(0).getUerAbled()==1)
+        {
+            return ResultFactory.buildFailResult("登录失败,账号已被封禁");
+        }
         return ResultFactory.buildSuccessResult(users.get(0));
 
     }

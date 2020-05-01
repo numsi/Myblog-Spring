@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Mapper;
  * (Blog)表数据库访问层
  *
  * @author numsi
- * @since 2020-04-29 20:22:25
+ * @since 2020-05-01 19:37:19
  */
   @Mapper
 public interface BlogDao {
@@ -43,7 +43,7 @@ public interface BlogDao {
       /**
      * @Description 查询全部数据
      * @author numsi
-     * @date 2020-04-29 20:22:25
+     * @date 2020-05-01 19:37:19
      * 分页使用MyBatis的插件实现
      * @return 对象列表
      */
