@@ -87,6 +87,12 @@ public class BlogController {
         return restTemplate.getForObject(REST_URL_PREFIX+"/blog/listByTag?id="+id+"&pageNum="+pageNum+"&pageSize="+pageSize,Result.class);
     }
 
+    @GetMapping("/blog/listAllKind")
+    public Result listAllKind( @PathParam("pageNum") int pageNum, @PathParam("pageSize") int pageSize)
+    {
+        return restTemplate.getForObject(REST_URL_PREFIX+"/blog/listAllKind?pageNum="+pageNum+"&pageSize="+pageSize,Result.class);
+    }
+
     /**
      * description: 获取所有此分类的博文信息
      *

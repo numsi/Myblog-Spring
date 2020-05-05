@@ -152,6 +152,18 @@ public class BlogProvider {
 
     }
 
+    @GetMapping("/blog/listAllKind")
+    public Result listAllKind( @PathParam("pageNum") int pageNum, @PathParam("pageSize") int pageSize)
+    {
+
+        PageHelper.startPage(pageNum,pageSize);
+        List<Blog> blogs = blogService.queryAll();
+
+        PageInfo<Blog> pageInfo =new PageInfo<>(blogs);
+        return ResultFactory.buildSuccessResult(pageInfo);
+
+    }
+
     /**
      * description: 删除某一博文
      *

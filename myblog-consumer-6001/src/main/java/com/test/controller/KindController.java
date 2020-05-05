@@ -3,11 +3,10 @@ package com.test.controller;
 import com.test.entity.Kind;
 import com.test.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
+
+import javax.websocket.server.PathParam;
 
 /**
  * @author numsi
@@ -48,6 +47,13 @@ public class KindController {
         return restTemplate.postForObject(REST_URL_PREFIX+"/kind/update",kind,Result.class);
     }
 
+    @GetMapping("/kind/delete/{id}")
+    public Result deleteKind(@PathVariable("id") int id)
+    {
+
+        return restTemplate.getForObject(REST_URL_PREFIX+"/kind/delete/"+id,Result.class);
+    }
+
     /**
      * description: 获取所有的分类信息
      *
@@ -58,5 +64,11 @@ public class KindController {
     public Result getAll()
     {
         return restTemplate.getForObject(REST_URL_PREFIX+"/kind/list",Result.class);
+    }
+
+    @GetMapping("/kind/page")
+    public Result listTag(@PathParam("pageNum") int pageNum, @PathParam("pageSize") int pageSize)
+    {
+        return restTemplate.getForObject(REST_URL_PREFIX+"/kind/page?pageNum="+pageNum+"&pageSize="+pageSize,Result.class);
     }
 }

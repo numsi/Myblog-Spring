@@ -2,68 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f6c80c2-3019-43ab-99aa-fc11dc0618dc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/myblog-api/src/main/java/com/test/utils/ListUtis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/config/StaticFileConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/ImgUpload.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myblog-provider-8002/src/main/resources/mybatis/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myblog-provider-8003/src/main/resources/mybatis/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/EasyCodeConfig/myblog-like.json" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EasyCodeConfig/myblog-like.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/EasyCodeConfig/myblog-user.json" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EasyCodeConfig/myblog-user.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/EasyCodeConfig/myblog-view.json" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EasyCodeConfig/myblog-view.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/964558e3-9692-42e2-9e09-3e7a9d1a8cd6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/964558e3-9692-42e2-9e09-3e7a9d1a8cd6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/config/WebConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/interceptor/TokenInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/util/TokenUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/Follow.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/Follow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/Like.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/Like.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-api/target/classes/com/test/entity/Blog.class" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-api/target/classes/com/test/entity/Blog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-api/target/classes/com/test/entity/Follow.class" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-api/target/classes/com/test/entity/Follow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-api/target/classes/com/test/entity/Like.class" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-api/target/classes/com/test/entity/Like.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-api/target/classes/com/test/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-api/target/classes/com/test/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-api/target/classes/com/test/entity/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-api/target/classes/com/test/entity/View.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myblog-consumer-6001/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-consumer-6001/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/config/WebConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/BlogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/FollowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/FollowController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/KindController.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/KindController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/LikeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/LikeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/TagController.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/TagController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/ViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/ViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-consumer-6001/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-consumer-6001/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/controller/FollowProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/controller/FollowProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/controller/TagProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/controller/TagProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/controller/UserProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/controller/UserProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/dao/FollowDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/dao/FollowDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/service/FollowService.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/service/FollowService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/service/impl/FollowServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/service/impl/FollowServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8001/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8001/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8001/src/main/resources/mybatis/mapper/UserDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8001/src/main/resources/mybatis/mapper/UserDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8001/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8001/target/classes/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8001/target/classes/mybatis/mapper/UserDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8001/target/classes/mybatis/mapper/UserDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/Provider_8002.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/Provider_8002.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/controller/BlogProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/controller/BlogProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/controller/CommentProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/controller/CommentProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/controller/LikeProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/controller/LikeProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/controller/ViewProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/controller/ViewProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/dao/BlogDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/dao/BlogDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/dao/LikeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/dao/LikeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/dao/ViewDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/dao/ViewDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/service/BlogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/service/LikeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/service/LikeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/service/ViewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/service/ViewService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/service/impl/BlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/service/impl/BlogServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/service/impl/LikeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/service/impl/LikeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/service/impl/ViewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/service/impl/ViewServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8002/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8002/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8002/src/main/resources/mybatis/mapper/BlogDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8002/src/main/resources/mybatis/mapper/BlogDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8002/src/main/resources/mybatis/mapper/LikeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8002/src/main/resources/mybatis/mapper/LikeDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8002/src/main/resources/mybatis/mapper/ViewDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8002/src/main/resources/mybatis/mapper/ViewDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myblog-provider-8003/src/main/java/com/test/Provider_8003.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8003/src/main/java/com/test/Provider_8003.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myblog-provider-8003/src/main/java/com/test/controller/AdminProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8003/src/main/java/com/test/controller/AdminProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myblog-provider-8003/src/main/java/com/test/controller/KindProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-provider-8003/src/main/java/com/test/controller/KindProvider.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/myblog-api/target/" />
@@ -115,11 +66,83 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ViewProvider.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/controller/ViewProvider.java">
+      <file leaf-file-name="KindProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myblog-provider-8003/src/main/java/com/test/controller/KindProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-181">
-              <caret line="39" column="71" selection-start-line="39" selection-start-column="71" selection-end-line="39" selection-end-column="71" />
+            <state relative-caret-position="275">
+              <caret line="93" column="33" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminProvider.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/myblog-provider-8003/src/main/java/com/test/controller/AdminProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-99">
+              <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/AdminController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Admin.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/Admin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="22" column="27" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/controller/UserProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="237">
+              <caret line="163" column="4" lean-forward="true" selection-start-line="163" selection-start-column="4" selection-end-line="164" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="431">
+              <caret line="56" column="28" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="View.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/View.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="23" column="28" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BlogProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/controller/BlogProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="154" column="4" lean-forward="true" selection-start-line="154" selection-start-column="4" selection-end-line="155" selection-end-column="102" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KindController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/KindController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="53" column="68" selection-start-line="53" selection-start-column="68" selection-end-line="53" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -145,43 +168,29 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/myblog-consumer-80/src/main/java/com/test/Consumer_80.java" />
-        <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/Consumer_6001.java" />
-        <option value="$PROJECT_DIR$/myblog-consumer-6001/pom.xml" />
-        <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/config/ConfigBean.java" />
-        <option value="$PROJECT_DIR$/myblog-api/src/main/java/com/test/utils/JsonResult.java" />
-        <option value="$PROJECT_DIR$/myblog-api/src/main/java/com/test/utils/ResultCode.java" />
-        <option value="$PROJECT_DIR$/myblog-api/src/main/java/com/test/utils/ResultFactory.java" />
         <option value="$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/entity/User.java" />
         <option value="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/controller/UserController.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/myblog-provider-8001/pom.xml" />
         <option value="$PROJECT_DIR$/myblog-provider-8003/src/main/resources/application.yaml" />
         <option value="$PROJECT_DIR$/myblog-provider-8003/pom.xml" />
-        <option value="$PROJECT_DIR$/myblog-provider-8003/src/main/java/com/test/controller/KindProvider.java" />
         <option value="$PROJECT_DIR$/myblog-api/src/main/java/com/test/utils/Result.java" />
         <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/TagProvider.java" />
         <option value="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/controller/NoticeProvider.java" />
         <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/NoticeController.java" />
-        <option value="$PROJECT_DIR$/myblog-provider-8003/src/main/java/com/test/controller/AdminProvider.java" />
-        <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/config/WebConfig.java" />
         <option value="$PROJECT_DIR$/myblog-api/src/main/java/com/test/utils/ListUtis.java" />
-        <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/UserController.java" />
         <option value="$PROJECT_DIR$/myblog-provider-8001/src/main/resources/application.yaml" />
         <option value="$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/User.java" />
         <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/config/StaticFileConfig.java" />
         <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/AdminController.java" />
-        <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/KindController.java" />
         <option value="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/Provider_8002.java" />
         <option value="$PROJECT_DIR$/myblog-provider-8003/src/main/java/com/test/Provider_8003.java" />
         <option value="$PROJECT_DIR$/myblog-provider-8002/pom.xml" />
-        <option value="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/controller/UserProvider.java" />
         <option value="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/controller/TagProvider.java" />
         <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/TagController.java" />
         <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/ImgUpload.java" />
         <option value="$PROJECT_DIR$/myblog-provider-8002/src/main/resources/application.yaml" />
-        <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/ViewController.java" />
         <option value="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/controller/FollowProvider.java" />
         <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/FollowController.java" />
         <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/LikeController.java" />
@@ -191,11 +200,25 @@
         <option value="$PROJECT_DIR$/myblog-provider-8002/src/test/java/test.java" />
         <option value="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/dao/BlogDao.java" />
         <option value="$PROJECT_DIR$/myblog-provider-8002/src/main/resources/mybatis/mapper/BlogDao.xml" />
-        <option value="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/controller/BlogProvider.java" />
-        <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/BlogController.java" />
         <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/CommentController.java" />
         <option value="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/controller/CommentProvider.java" />
         <option value="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/controller/ViewProvider.java" />
+        <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/annotion/UserLoginToken.java" />
+        <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/interceptor/AuthenticationInterceptor.java" />
+        <option value="$PROJECT_DIR$/myblog-consumer-6001/pom.xml" />
+        <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/config/WebConfig.java" />
+        <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/config/WebMvcConfigurer.java" />
+        <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/ViewController.java" />
+        <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/interceptor/TokenInterceptor.java" />
+        <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/util/TokenUtil.java" />
+        <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/config/WebConfiguration.java" />
+        <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/KindController.java" />
+        <option value="$PROJECT_DIR$/myblog-provider-8003/src/main/java/com/test/controller/KindProvider.java" />
+        <option value="$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/controller/BlogProvider.java" />
+        <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/BlogController.java" />
+        <option value="$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/controller/UserProvider.java" />
+        <option value="$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/myblog-provider-8003/src/main/java/com/test/controller/AdminProvider.java" />
       </list>
     </option>
   </component>
@@ -253,6 +276,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -319,6 +345,17 @@
             <path>
               <item name="myblog_spring" type="b2602c69:ProjectViewProjectNode" />
               <item name="myblog_spring" type="462c0819:PsiDirectoryNode" />
+              <item name="myblog-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog_spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog_spring" type="462c0819:PsiDirectoryNode" />
               <item name="myblog-consumer-6001" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -360,6 +397,17 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog_spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog_spring" type="462c0819:PsiDirectoryNode" />
+              <item name="myblog-consumer-6001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="myblog_spring" type="b2602c69:ProjectViewProjectNode" />
@@ -375,6 +423,73 @@
             <path>
               <item name="myblog_spring" type="b2602c69:ProjectViewProjectNode" />
               <item name="myblog_spring" type="462c0819:PsiDirectoryNode" />
+              <item name="myblog-consumer-6001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="interceptor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog_spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog_spring" type="462c0819:PsiDirectoryNode" />
+              <item name="myblog-consumer-6001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog_spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog_spring" type="462c0819:PsiDirectoryNode" />
+              <item name="myblog-eureka-7001" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog_spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog_spring" type="462c0819:PsiDirectoryNode" />
+              <item name="myblog-eureka-7001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog_spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog_spring" type="462c0819:PsiDirectoryNode" />
+              <item name="myblog-eureka-7001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog_spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog_spring" type="462c0819:PsiDirectoryNode" />
+              <item name="myblog-eureka-7001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog_spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog_spring" type="462c0819:PsiDirectoryNode" />
+              <item name="myblog-eureka-7001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog_spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog_spring" type="462c0819:PsiDirectoryNode" />
+              <item name="myblog-eureka-7001" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog_spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog_spring" type="462c0819:PsiDirectoryNode" />
               <item name="myblog-provider-8001" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -431,24 +546,6 @@
             <path>
               <item name="myblog_spring" type="b2602c69:ProjectViewProjectNode" />
               <item name="myblog_spring" type="462c0819:PsiDirectoryNode" />
-              <item name="myblog-provider-8001" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myblog_spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myblog_spring" type="462c0819:PsiDirectoryNode" />
-              <item name="myblog-provider-8001" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myblog_spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myblog_spring" type="462c0819:PsiDirectoryNode" />
               <item name="myblog-provider-8002" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -507,15 +604,57 @@
               <item name="myblog_spring" type="462c0819:PsiDirectoryNode" />
               <item name="myblog-provider-8002" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog_spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog_spring" type="462c0819:PsiDirectoryNode" />
+              <item name="myblog-provider-8003" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog_spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog_spring" type="462c0819:PsiDirectoryNode" />
+              <item name="myblog-provider-8003" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog_spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog_spring" type="462c0819:PsiDirectoryNode" />
+              <item name="myblog-provider-8003" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog_spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog_spring" type="462c0819:PsiDirectoryNode" />
+              <item name="myblog-provider-8003" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog_spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog_spring" type="462c0819:PsiDirectoryNode" />
+              <item name="myblog-provider-8003" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblog_spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblog_spring" type="462c0819:PsiDirectoryNode" />
+              <item name="myblog-provider-8003" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -539,17 +678,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.test.controller" />
       <recent name="com.test.config" />
+      <recent name="com.test.util" />
+      <recent name="com.test.interceptor" />
+      <recent name="com.test.controller" />
       <recent name="com.test.entity" />
-      <recent name="com.test" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\idea_project\myblog_spring\myblog-consumer-6001\src\main\java\com\test" />
       <recent name="F:\idea_project\myblog_spring\myblog-provider-8002\src\main\resources\mybatis" />
       <recent name="F:\idea_project\myblog_spring\myblog-provider-8003\src\main\resources\mybatis" />
       <recent name="F:\idea_project\myblog_spring\myblog-provider-8003\src\main\resources" />
       <recent name="F:\idea_project\myblog_spring\myblog-provider-8002\src\main\resources" />
-      <recent name="F:\idea_project\myblog_spring\myblog-provider-8001\src\main\resources\mybatis" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -564,7 +704,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Consumer_6001">
+  <component name="RunManager" selected="Spring Boot.Provider_8003">
     <configuration name="Provider_8002" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.test.Provider_8002" />
       <module name="myblog-provider-8002" />
@@ -595,23 +735,6 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="test.search" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="myblog-provider-8002" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="test" />
-      <option name="METHOD_NAME" value="search" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
     <configuration name="Consumer_6001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="myblog-consumer-6001" />
       <extension name="coverage">
@@ -621,6 +744,16 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.test.Consumer_6001" />
+    </configuration>
+    <configuration name="EurekaServe_7001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="myblog-eureka-7001" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.test.EurekaServe_7001" />
     </configuration>
     <configuration name="Provider_8001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="myblog-provider-8001" />
@@ -669,15 +802,15 @@
       <item itemvalue="Spring Boot.Consumer_6001" />
       <item itemvalue="Application.Provider_8002" />
       <item itemvalue="Spring Boot.Provider_8003" />
-      <item itemvalue="JUnit.test.search" />
+      <item itemvalue="Spring Boot.EurekaServe_7001" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Provider_8002" />
-        <item itemvalue="Spring Boot.Provider_8001" />
         <item itemvalue="Spring Boot.Consumer_6001" />
         <item itemvalue="Spring Boot.Provider_8003" />
-        <item itemvalue="JUnit.test.search" />
+        <item itemvalue="Spring Boot.Provider_8001" />
+        <item itemvalue="Application.Provider_8002" />
+        <item itemvalue="Spring Boot.EurekaServe_7001" />
       </list>
     </recent_temporary>
   </component>
@@ -712,6 +845,7 @@
       <workItem from="1588605710064" duration="8581000" />
       <workItem from="1588635195580" duration="19476000" />
       <workItem from="1588664955856" duration="9227000" />
+      <workItem from="1588676704371" duration="14984000" />
     </task>
     <task id="LOCAL-00001" summary="log4j版本问题">
       <created>1587820252721</created>
@@ -776,7 +910,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588341969116</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="用户端所需接口基本完成">
+      <created>1588676874368</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1588676874368</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -794,7 +935,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94110000" />
+    <option name="totallyTimeSpent" value="109094000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
@@ -820,31 +961,29 @@
       <window_info anchor="bottom" id="Java Enterprise" order="14" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32867134" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3583916" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3216783" />
       <window_info anchor="bottom" id="Spring" order="12" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49868074" visible="true" weight="0.2497979" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49868074" visible="true" weight="0.25383994" />
       <window_info anchor="right" id="Bean Validation" order="10" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32867134" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Favorites" order="5" sideWeight="0.5013193" side_tool="true" weight="0.27405012" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32867134" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32867134" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="right" id="RestServices" order="11" />
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Spring" order="12" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32867134" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3374126" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Word Book" order="5" side_tool="true" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" sideWeight="0.5013193" side_tool="true" weight="0.27405012" />
@@ -853,24 +992,26 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="15" weight="0.32867134" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Word Book" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Tail" order="10" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32867134" />
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.32983023" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32867134" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49868074" visible="true" weight="0.27970898" />
       <window_info anchor="right" id="Database" order="7" weight="0.32983023" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="RestServices" order="11" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32867134" />
+      <window_info anchor="bottom" id="Tail" order="10" />
       <window_info anchor="right" id="Bean Validation" order="10" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
     </layout-to-restore>
@@ -917,7 +1058,8 @@
     <MESSAGE value="总体provider结构与点赞、阅读数、博文相关接口实现" />
     <MESSAGE value="provider中的controller实现" />
     <MESSAGE value="consumer中接口基本实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="consumer中接口基本实现" />
+    <MESSAGE value="用户端所需接口基本完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="用户端所需接口基本完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -925,215 +1067,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/Provider_8001.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="9" selection-start-line="9" selection-end-line="10" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-provider-8003/src/main/java/com/test/Provider_8003.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-provider-8001/src/main/resources/mybatis/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-provider-8003/src/main/resources/mybatis/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-provider-8002/src/main/resources/mybatis/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/Admin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://964558e3-9692-42e2-9e09-3e7a9d1a8cd6/schema/myblog/table/user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-provider-8003/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="13" selection-start-line="13" selection-end-line="87" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-provider-8002/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1653">
-          <caret line="87" column="19" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-api/src/main/java/com/test/utils/ResultFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/Notice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/controller/UserProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="56" column="11" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/Kind.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="28" column="27" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-provider-8001/src/main/resources/application.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="22" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-provider-8002/src/main/resources/application.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/Provider_8002.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/Like.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.17/tomcat-embed-core-9.0.17-sources.jar!/javax/servlet/http/HttpServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="633" selection-start-line="633" selection-end-line="633" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/controller/FollowProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="95" column="7" lean-forward="true" selection-start-line="95" selection-start-column="7" selection-end-line="95" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/FollowController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="47" column="76" selection-start-line="47" selection-start-column="76" selection-end-line="47" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/ImgUpload.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="97" column="25" selection-start-line="97" selection-start-column="25" selection-end-line="97" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/KindController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="52" column="6" lean-forward="true" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/NoticeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="75" column="56" selection-start-line="75" selection-start-column="56" selection-end-line="75" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/TagController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="68" column="6" lean-forward="true" selection-start-line="68" selection-start-column="6" selection-end-line="68" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="28" column="31" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/Follow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="36" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="36" />
-          <folding>
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#541#542#0" expanded="true" />
-            <element signature="e#581#582#0" expanded="true" />
-            <element signature="e#625#626#0" expanded="true" />
-            <element signature="e#664#665#0" expanded="true" />
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#785#786#0" expanded="true" />
-            <element signature="e#824#825#0" expanded="true" />
-            <element signature="e#858#859#0" expanded="true" />
-            <element signature="e#913#914#0" expanded="true" />
-            <element signature="e#959#960#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/Tag.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="24" column="25" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/controller/TagProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-291">
-          <caret line="81" column="24" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1158,16 +1095,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-provider-8002/src/test/java/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-provider-8002/src/test/java/test.java" />
     <entry file="file://$PROJECT_DIR$/myblog-api/src/main/resources/mybatis/mapper/AdminDao.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -1179,10 +1107,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
           <caret line="106" selection-start-line="106" selection-end-line="106" />
-          <folding>
-            <element signature="e#2018#2019#0" expanded="true" />
-            <element signature="e#2045#2046#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1212,31 +1136,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/controller/BlogProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="171" column="133" selection-start-line="171" selection-start-column="25" selection-end-line="171" selection-end-column="133" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/BlogController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="115" column="30" selection-start-line="115" selection-start-column="30" selection-end-line="115" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/Blog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="16" column="26" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/LikeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="59" column="17" lean-forward="true" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -1250,13 +1153,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/CommentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="104" column="66" selection-start-line="104" selection-start-column="66" selection-end-line="104" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/controller/CommentProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
@@ -1264,24 +1160,264 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/controller/ViewProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="47" column="58" selection-start-line="47" selection-start-column="58" selection-end-line="47" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-eureka-7001/src/main/java/com/test/EurekaServe_7001.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/annotion/PassToken.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/annotion/UserLoginToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/interceptor/AuthenticationInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="59" column="39" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/ImgUpload.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="97" column="50" selection-start-line="97" selection-start-column="47" selection-end-line="97" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/config/StaticFileConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-76">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/config/ConfigBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-api/src/main/java/com/test/utils/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-api/src/main/java/com/test/utils/ResultCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-api/src/main/java/com/test/utils/ResultFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-provider-8001/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-95" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/Provider_8002.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-provider-8003/src/main/java/com/test/Provider_8003.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="39" lean-forward="true" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/ViewController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="27" />
+        <state relative-caret-position="222">
+          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/LikeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/CommentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="101" column="17" selection-start-line="101" selection-start-column="17" selection-end-line="101" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/interceptor/TokenInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/util/TokenUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/config/WebConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-232">
+          <caret line="30" selection-start-line="30" selection-end-line="37" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/controller/TagProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="86" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/TagController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="59" column="4" selection-start-line="59" selection-start-column="4" selection-end-line="64" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/Kind.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="28" column="27" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/KindController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="53" column="68" selection-start-line="53" selection-start-column="68" selection-end-line="53" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/controller/BlogProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="154" column="4" lean-forward="true" selection-start-line="154" selection-start-column="4" selection-end-line="155" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/BlogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="31" column="26" lean-forward="true" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://964558e3-9692-42e2-9e09-3e7a9d1a8cd6/schema/myblog/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="56" column="28" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-provider-8001/src/main/java/com/test/controller/UserProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="163" column="4" lean-forward="true" selection-start-line="163" selection-start-column="4" selection-end-line="164" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-consumer-6001/src/main/java/com/test/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-provider-8003/src/main/java/com/test/controller/KindProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="93" column="33" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/View.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
+        <state relative-caret-position="123">
           <caret line="23" column="28" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myblog-provider-8002/src/main/java/com/test/controller/ViewProvider.java">
+    <entry file="file://$PROJECT_DIR$/myblog-api/src/main/java/com/test/entity/Admin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-181">
-          <caret line="39" column="71" selection-start-line="39" selection-start-column="71" selection-end-line="39" selection-end-column="71" />
+        <state relative-caret-position="129">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog-provider-8003/src/main/java/com/test/controller/AdminProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-99">
+          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
         </state>
       </provider>
     </entry>

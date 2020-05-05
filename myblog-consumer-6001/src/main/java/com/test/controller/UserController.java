@@ -1,7 +1,12 @@
 package com.test.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.test.entity.User;
+import com.test.util.TokenUtil;
 import com.test.utils.Result;
+import com.test.utils.ResultFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
@@ -65,7 +70,18 @@ public class UserController {
     @PostMapping("/user/login")
     public Result queryByItem(@RequestBody User user)
     {
-        return restTemplate.postForObject(REST_URL_PREFIX+"/user/login",user,Result.class);
+        Result result = restTemplate.postForObject(REST_URL_PREFIX+"/user/login",user,Result.class);
+        if(result.getCode() == 200){
+            User users = JSONObject.parseObject(JSONArray.toJSONString(result.getResult()), User.class);
+//            User temp = (User)result.getResult();
+            String token = TokenUtil.sign(users);
+            HashMap<String,Object> hs=new HashMap<>();
+            hs.put("token",token);
+            hs.put("user",users);
+            return ResultFactory.buildSuccessResult(hs);
+        }else{
+            return result;
+        }
     }
 
     /**
@@ -90,5 +106,11 @@ public class UserController {
     public Result deleteUser(@PathVariable("id") int id)
     {
         return restTemplate.getForObject(REST_URL_PREFIX+"/user/delete/"+id,Result.class);
+    }
+
+    @GetMapping("/user/change/{id}")
+    public Result changeUser(@PathVariable("id") int id)
+    {
+        return restTemplate.getForObject(REST_URL_PREFIX+"/user/change/"+id,Result.class);
     }
 }

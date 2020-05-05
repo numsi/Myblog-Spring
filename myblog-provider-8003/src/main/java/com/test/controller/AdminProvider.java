@@ -40,7 +40,7 @@ public class AdminProvider {
         {
             return ResultFactory.buildFailResult("账号密码出错!");
         }
-        return ResultFactory.buildSuccessResult(admins.get(1));
+        return ResultFactory.buildSuccessResult(admins.get(0));
 
     }
 
@@ -71,6 +71,6 @@ public class AdminProvider {
     public Result adminEmail()
     {
         List<Admin> admins = adminService.queryAll();
-        return ResultFactory.buildSuccessResult(admins.get(1).getAdminEmail());
+        return ResultFactory.buildSuccessResult(admins.get(0).getAdminEmail());
     }
 }

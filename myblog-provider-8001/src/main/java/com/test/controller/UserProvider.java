@@ -161,5 +161,17 @@ public class UserProvider {
         return ResultFactory.buildFailResult("删除用户失败");
     }
 
+    @GetMapping("/user/change/{id}")
+    public Result changeUser(@PathVariable("id") int id)
+    {
+        User user =userService.queryById(id);
+        if(user.getUerAbled()==0){
+            user.setUerAbled(1);
+        }else{
+            user.setUerAbled(0);
+        }
+        return ResultFactory.buildSuccessResult(userService.update(user));
+    }
+
 
 }
