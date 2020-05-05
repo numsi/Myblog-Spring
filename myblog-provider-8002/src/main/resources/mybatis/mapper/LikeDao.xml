@@ -6,13 +6,13 @@
         <!--@Table like-->
         <result property="likeId" column="like_id" jdbcType="INTEGER"/>
         <result property="likeBlog" column="like_blog" jdbcType="INTEGER"/>
-        <result property="likeUsername" column="like_username" jdbcType="INTEGER"/>
+        <result property="likeUser" column="like_user" jdbcType="INTEGER"/>
     </resultMap>
 
     <!--查询单个-->
     <select id="queryById" resultMap="BaseResultMap">
         select
-          like_id, like_blog, like_username
+          like_id, like_blog, like_user
         from myblog.like
         where like_id = #{likeId}
     </select>
@@ -20,7 +20,7 @@
     <!--查询指定行数据-->
     <select id="queryAllByLimit" resultMap="BaseResultMap">
         select
-          like_id, like_blog, like_username
+          like_id, like_blog, like_user
         from myblog.like
         limit #{offset}, #{limit}
     </select>
@@ -28,7 +28,7 @@
     <!--通过实体作为筛选条件查询-->
     <select id="queryAllByItem" resultMap="BaseResultMap">
         select
-          like_id, like_blog, like_username
+          like_id, like_blog, like_user
         from myblog.like
         <where>
             <if test="likeId != null">
@@ -37,16 +37,16 @@
             <if test="likeBlog != null">
                 and like_blog = #{likeBlog}
             </if>
-            <if test="likeUsername != null">
-                and like_username = #{likeUsername}
+            <if test="likeUser != null">
+                and like_user = #{likeUser}
             </if>
         </where>
     </select>
 
     <!--新增所有列-->
     <insert id="insert" keyProperty="likeId" useGeneratedKeys="true">
-        insert into myblog.like(like_blog, like_username)
-        values (#{likeBlog}, #{likeUsername})
+        insert into myblog.like(like_blog, like_user)
+        values (#{likeBlog}, #{likeUser})
     </insert>
 
     <!--通过主键修改数据-->
@@ -56,8 +56,8 @@
             <if test="likeBlog != null">
                 like_blog = #{likeBlog},
             </if>
-            <if test="likeUsername != null">
-                like_username = #{likeUsername},
+            <if test="likeUser != null">
+                like_user = #{likeUser},
             </if>
         </set>
         where like_id = #{likeId}
@@ -70,6 +70,6 @@
      <!--查询所有like-->
     <select id="queryAll" resultMap="BaseResultMap">
         select
-        like_id, like_blog, like_username        from like
+        like_id, like_blog, like_user        from like
     </select>
 </mapper>

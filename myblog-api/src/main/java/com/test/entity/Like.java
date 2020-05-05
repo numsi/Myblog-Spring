@@ -6,10 +6,10 @@ import java.io.Serializable;
  * (Like)实体类
  *
  * @author numsi
- * @since 2020-04-29 21:55:20
+ * @since 2020-05-05 10:14:32
  */
 public class Like implements Serializable {
-    private static final long serialVersionUID = 296713085080875025L;
+    private static final long serialVersionUID = 679744521828700255L;
     /**
     * 点赞id
     */

@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Mapper;
  * (User)表数据库访问层
  *
  * @author numsi
- * @since 2020-04-25 20:47:10
+ * @since 2020-05-04 23:06:25
  */
   @Mapper
 public interface UserDao {
@@ -43,7 +43,7 @@ public interface UserDao {
       /**
      * @Description 查询全部数据
      * @author numsi
-     * @date 2020-04-25 20:47:10
+     * @date 2020-05-04 23:06:25
      * 分页使用MyBatis的插件实现
      * @return 对象列表
      */

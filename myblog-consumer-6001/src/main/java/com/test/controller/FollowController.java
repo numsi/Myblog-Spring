@@ -3,9 +3,7 @@ package com.test.controller;
 import com.test.entity.Follow;
 import com.test.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import javax.websocket.server.PathParam;
@@ -36,22 +34,47 @@ public class FollowController {
         return restTemplate.getForObject(REST_URL_PREFIX+"/follow/get?id="+id+"&pageNum="+pageNum+"&pageSize="+pageSize,Result.class);
     }
 
+
     /**
-     * description: 新增关注
+     * description: 改变关注状态
      *
-     * @param follow
-     * @return java.lang.String
+     * @param user
+     * @param followed
+     * @return com.test.utils.Result
      */
-    @PostMapping("/follow/add")
-    public Result followAdd(Follow follow)
+    @GetMapping("/follow/change")
+    public Result deleteFollow(@PathParam("uid") int uid, @PathParam("followed") int followed)
     {
-        return restTemplate.postForObject(REST_URL_PREFIX+"/follow/add",follow,Result.class);
+        return restTemplate.getForObject(REST_URL_PREFIX+"/follow/change?uid="+uid+"&followed="+followed,Result.class);
     }
 
-    @GetMapping("/follow/delete")
-    public Result deleteFollow(@PathParam("user") int user, @PathParam("followed") int followed)
+    /**
+     * description: 获取粉丝数
+     *
+     * @param id
+     * @return com.test.utils.Result
+     */
+    @GetMapping("/follow/getFanNum/{id}")
+    public Result getFanNum(@PathVariable("id") int id)
     {
-        return restTemplate.getForObject(REST_URL_PREFIX+"/follow/delete?user="+user+"&followed="+followed,Result.class);
+        return restTemplate.getForObject(REST_URL_PREFIX+"/follow/getFanNum/"+id,Result.class);
+    }
+
+    /**
+     * description: 获取关注数
+     *
+     * @param id
+     * @return com.test.utils.Result
+     */
+    @GetMapping("/follow/getFollowNum/{id}")
+    public Result getFollowNum(@PathVariable("id") int id)
+    {
+        return restTemplate.getForObject(REST_URL_PREFIX+"/follow/getFollowNum/"+id,Result.class);
+    }
+
+    @GetMapping("/follow/check")
+    public Result checkFollow(@PathParam("uid") int uid, @PathParam("followed") int followed){
+        return restTemplate.getForObject(REST_URL_PREFIX+"/follow/check?uid="+uid+"&followed="+followed,Result.class);
     }
 
 }

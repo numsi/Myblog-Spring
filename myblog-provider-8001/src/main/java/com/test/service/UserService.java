@@ -7,7 +7,7 @@ import java.util.List;
  * (User)表服务接口
  *
  * @author numsi
- * @since 2020-04-25 20:47:11
+ * @since 2020-05-04 23:06:27
  */
 public interface UserService {
 
@@ -55,7 +55,7 @@ public interface UserService {
        /**
      * @Description 查询全部数据
      * @author numsi
-     * @date 2020-04-25 20:47:11
+     * @date 2020-05-04 23:06:27
      * 分页使用MyBatis的插件实现
      * @return 对象列表
      */

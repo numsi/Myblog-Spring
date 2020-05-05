@@ -99,4 +99,11 @@ public class BlogServiceImpl implements BlogService {
     public List<Blog> queryAllByItem(Blog blog) {
         return this.blogDao.queryAllByItem( blog);
     }
+
+    @Override
+    public List<Blog> queryByKeyWord(String keyword) {
+        return this.blogDao.queryByKeyWord(keyword);
+    }
+
+
 }

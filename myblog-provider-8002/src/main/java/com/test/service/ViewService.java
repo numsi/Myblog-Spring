@@ -7,7 +7,7 @@ import java.util.List;
  * (View)表服务接口
  *
  * @author numsi
- * @since 2020-04-29 20:23:53
+ * @since 2020-05-05 09:53:14
  */
 public interface ViewService {
 
@@ -55,7 +55,7 @@ public interface ViewService {
        /**
      * @Description 查询全部数据
      * @author numsi
-     * @date 2020-04-29 20:23:53
+     * @date 2020-05-05 09:53:14
      * 分页使用MyBatis的插件实现
      * @return 对象列表
      */

@@ -4,6 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.test.entity.Tag;
 import com.test.service.TagService;
+import com.test.utils.ListUtis;
 import com.test.utils.Result;
 import com.test.utils.ResultFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +36,7 @@ public class TagProvider {
     public Result addTag(@RequestBody Tag tag)
     {
         List<Tag> tags=tagService.queryAllByItem(tag);
-        if(tags!=null)
+        if(ListUtis.isNotNullEmpty(tags))
         {
             return ResultFactory.buildFailResult("已存在改标签");
         }
@@ -51,6 +52,16 @@ public class TagProvider {
     @PostMapping("/tag/update")
     public Result updateTag(@RequestBody Tag tag)
     {
+        Tag t = new Tag();
+        t.setTagAuthor(tag.getTagAuthor());
+        t.setTagName(tag.getTagName());
+
+        List<Tag> tags=tagService.queryAllByItem(t);
+        if(ListUtis.isNotNullEmpty(tags))
+        {
+            return ResultFactory.buildFailResult("已存在改标签");
+        }
+
         Tag res = tagService.update(tag);
         if(res==null)
         {

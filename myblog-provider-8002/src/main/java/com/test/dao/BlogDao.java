@@ -73,4 +73,7 @@ public interface BlogDao {
      */
     int deleteById(Integer blogId);
 
+
+    List<Blog> queryByKeyWord(@Param("keyword")String keyword);
+
 }

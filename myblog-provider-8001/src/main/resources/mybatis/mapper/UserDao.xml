@@ -10,15 +10,17 @@
         <result property="userNickname" column="user_nickname" jdbcType="VARCHAR"/>
         <result property="userCreattime" column="user_creattime" jdbcType="TIMESTAMP"/>
         <result property="userGender" column="user_gender" jdbcType="INTEGER"/>
-        <result property="userBirth" column="user_birth" jdbcType="TIMESTAMP"/>
+        <result property="userPhone" column="user_phone" jdbcType="VARCHAR"/>
         <result property="userEmail" column="user_email" jdbcType="VARCHAR"/>
         <result property="userImgUrl" column="user_img_url" jdbcType="VARCHAR"/>
+        <result property="userIntroduction" column="user_introduction" jdbcType="VARCHAR"/>
+        <result property="uerAbled" column="uer_abled" jdbcType="INTEGER"/>
     </resultMap>
 
     <!--查询单个-->
     <select id="queryById" resultMap="BaseResultMap">
         select
-          user_id, user_username, user_password, user_nickname, user_creattime, user_gender, user_birth, user_email, user_img_url
+          user_id, user_username, user_password, user_nickname, user_creattime, user_gender, user_phone, user_email, user_img_url, user_introduction, uer_abled
         from myblog.user
         where user_id = #{userId}
     </select>
@@ -26,7 +28,7 @@
     <!--查询指定行数据-->
     <select id="queryAllByLimit" resultMap="BaseResultMap">
         select
-          user_id, user_username, user_password, user_nickname, user_creattime, user_gender, user_birth, user_email, user_img_url
+          user_id, user_username, user_password, user_nickname, user_creattime, user_gender, user_phone, user_email, user_img_url, user_introduction, uer_abled
         from myblog.user
         limit #{offset}, #{limit}
     </select>
@@ -34,7 +36,7 @@
     <!--通过实体作为筛选条件查询-->
     <select id="queryAllByItem" resultMap="BaseResultMap">
         select
-          user_id, user_username, user_password, user_nickname, user_creattime, user_gender, user_birth, user_email, user_img_url
+          user_id, user_username, user_password, user_nickname, user_creattime, user_gender, user_phone, user_email, user_img_url, user_introduction, uer_abled
         from myblog.user
         <where>
             <if test="userId != null">
@@ -55,8 +57,8 @@
             <if test="userGender != null">
                 and user_gender = #{userGender}
             </if>
-            <if test="userBirth != null">
-                and user_birth = #{userBirth}
+            <if test="userPhone != null and userPhone != ''">
+                and user_phone = #{userPhone}
             </if>
             <if test="userEmail != null and userEmail != ''">
                 and user_email = #{userEmail}
@@ -64,13 +66,19 @@
             <if test="userImgUrl != null and userImgUrl != ''">
                 and user_img_url = #{userImgUrl}
             </if>
+            <if test="userIntroduction != null and userIntroduction != ''">
+                and user_introduction = #{userIntroduction}
+            </if>
+            <if test="uerAbled != null">
+                and uer_abled = #{uerAbled}
+            </if>
         </where>
     </select>
 
     <!--新增所有列-->
     <insert id="insert" keyProperty="userId" useGeneratedKeys="true">
-        insert into myblog.user(user_username, user_password, user_nickname, user_creattime, user_gender, user_birth, user_email, user_img_url)
-        values (#{userUsername}, #{userPassword}, #{userNickname}, #{userCreattime}, #{userGender}, #{userBirth}, #{userEmail}, #{userImgUrl})
+        insert into myblog.user(user_username, user_password, user_nickname, user_creattime, user_gender, user_phone, user_email, user_img_url, user_introduction, uer_abled)
+        values (#{userUsername}, #{userPassword}, #{userNickname}, #{userCreattime}, #{userGender}, #{userPhone}, #{userEmail}, #{userImgUrl}, #{userIntroduction}, #{uerAbled})
     </insert>
 
     <!--通过主键修改数据-->
@@ -92,14 +100,20 @@
             <if test="userGender != null">
                 user_gender = #{userGender},
             </if>
-            <if test="userBirth != null">
-                user_birth = #{userBirth},
+            <if test="userPhone != null and userPhone != ''">
+                user_phone = #{userPhone},
             </if>
             <if test="userEmail != null and userEmail != ''">
                 user_email = #{userEmail},
             </if>
             <if test="userImgUrl != null and userImgUrl != ''">
                 user_img_url = #{userImgUrl},
+            </if>
+            <if test="userIntroduction != null and userIntroduction != ''">
+                user_introduction = #{userIntroduction},
+            </if>
+            <if test="uerAbled != null">
+                uer_abled = #{uerAbled},
             </if>
         </set>
         where user_id = #{userId}
@@ -112,6 +126,6 @@
      <!--查询所有user-->
     <select id="queryAll" resultMap="BaseResultMap">
         select
-        user_id, user_username, user_password, user_nickname, user_creattime, user_gender, user_birth, user_email, user_img_url        from user
+        user_id, user_username, user_password, user_nickname, user_creattime, user_gender, user_phone, user_email, user_img_url, user_introduction, uer_abled        from user
     </select>
 </mapper>

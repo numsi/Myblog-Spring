@@ -3,10 +3,7 @@ package com.test.controller;
 import com.test.entity.User;
 import com.test.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import javax.websocket.server.PathParam;
@@ -42,7 +39,7 @@ public class UserController {
      * @return java.lang.String
      */
     @PostMapping("/user/add")
-    public Result add(User user)
+    public Result add(@RequestBody User user)
     {
         return restTemplate.postForObject(REST_URL_PREFIX+"/user/add",user,Result.class);
     }
@@ -66,9 +63,8 @@ public class UserController {
      * @return java.lang.String
      */
     @PostMapping("/user/login")
-    public Result queryByItem(User user)
+    public Result queryByItem(@RequestBody User user)
     {
-
         return restTemplate.postForObject(REST_URL_PREFIX+"/user/login",user,Result.class);
     }
 
@@ -79,7 +75,7 @@ public class UserController {
      * @return java.lang.String
      */
     @PostMapping("/user/update")
-    public Result updateUser( User user)
+    public Result updateUser(@RequestBody User user)
     {
         return restTemplate.postForObject(REST_URL_PREFIX+"/user/update",user,Result.class);
     }

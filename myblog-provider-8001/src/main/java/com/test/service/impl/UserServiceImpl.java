@@ -12,7 +12,7 @@ import java.util.List;
  * (User)表服务实现类
  *
  * @author numsi
- * @since 2020-04-25 20:47:12
+ * @since 2020-05-04 23:06:27
  */
 @Service("userService")
 public class UserServiceImpl implements UserService {
@@ -80,7 +80,7 @@ public class UserServiceImpl implements UserService {
             /**
      * @Description 查询全部数据
      * @author numsi
-     * @date 2020-04-25 20:47:12
+     * @date 2020-05-04 23:06:27
      * 分页使用MyBatis的插件实现
      * @return 对象列表
      */

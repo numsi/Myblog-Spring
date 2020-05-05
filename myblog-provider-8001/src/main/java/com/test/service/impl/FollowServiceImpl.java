@@ -12,7 +12,7 @@ import java.util.List;
  * (Follow)表服务实现类
  *
  * @author numsi
- * @since 2020-04-28 19:23:23
+ * @since 2020-05-05 11:37:10
  */
 @Service("followService")
 public class FollowServiceImpl implements FollowService {
@@ -80,7 +80,7 @@ public class FollowServiceImpl implements FollowService {
             /**
      * @Description 查询全部数据
      * @author numsi
-     * @date 2020-04-28 19:23:23
+     * @date 2020-05-05 11:37:10
      * 分页使用MyBatis的插件实现
      * @return 对象列表
      */

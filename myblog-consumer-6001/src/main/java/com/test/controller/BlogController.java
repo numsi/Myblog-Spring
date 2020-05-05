@@ -3,10 +3,7 @@ package com.test.controller;
 import com.test.entity.Blog;
 import com.test.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import javax.websocket.server.PathParam;
@@ -33,7 +30,7 @@ public class BlogController {
      * @return com.test.utils.Result
      */
     @PostMapping("/blog/add")
-    public Result addBlog(Blog blog)
+    public Result addBlog(@RequestBody Blog blog)
     {
         return restTemplate.postForObject(REST_URL_PREFIX+"/blog/add",blog,Result.class);
     }
@@ -45,7 +42,7 @@ public class BlogController {
      * @return com.test.utils.Result
      */
     @PostMapping("/blog/update")
-    public Result updateBlog(Blog blog)
+    public Result updateBlog(@RequestBody Blog blog)
     {
         return restTemplate.postForObject(REST_URL_PREFIX+"/blog/update",blog,Result.class);
     }
@@ -111,8 +108,14 @@ public class BlogController {
      * @return com.test.utils.Result
      */
     @GetMapping("/blog/delete/{id}")
-    public Result deleteBlog(@PathVariable("id") int id)
+    public Result deleteBlog(@PathVariable("id") Integer id)
     {
         return restTemplate.getForObject(REST_URL_PREFIX+"/blog/delete/"+id,Result.class);
+    }
+
+    @GetMapping("/blog/search")
+    public Result search(@PathParam("keyword") String keyword, @PathParam("pageNum") int pageNum, @PathParam("pageSize") int pageSize)
+    {
+        return restTemplate.getForObject(REST_URL_PREFIX+"/blog/search?keyword="+keyword+"&pageNum="+pageNum+"&pageSize="+pageSize,Result.class);
     }
 }

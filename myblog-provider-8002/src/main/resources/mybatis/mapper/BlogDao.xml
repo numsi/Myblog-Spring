@@ -142,4 +142,15 @@
         select
         blog_id, blog_title, blog_creattime, blog_updatetime, blog_author, blog_content_html, blog_content_md, blog_release_type, blog_kind, blog_tag, blog_report, blog_abstract, blog_cover        from blog
     </select>
+
+    <!--模糊搜索-->
+    <select id="queryByKeyWord" parameterType="string" resultMap="BaseResultMap">
+        <bind name="pattern" value="'%' + keyword + '%'" />
+        select
+        blog_id, blog_title, blog_creattime, blog_updatetime, blog_author, blog_content_html, blog_content_md, blog_release_type, blog_kind, blog_tag, blog_report, blog_abstract, blog_cover        from blog
+        WHERE blog_title LIKE #{pattern}
+            OR blog_content_html LIKE #{pattern}
+            OR blog_content_md LIKE #{pattern}
+    </select>
+
 </mapper>

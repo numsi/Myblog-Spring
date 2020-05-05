@@ -31,7 +31,7 @@ public class AdminController {
      * @return com.test.utils.Result
      */
     @PostMapping("/admin/update")
-    public Result adminUpdate(Admin admin)
+    public Result adminUpdate(@RequestBody Admin admin)
     {return restTemplate.postForObject(REST_URL_PREFIX+"/admin/update",admin,Result.class);
     }
 

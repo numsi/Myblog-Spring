@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -35,6 +36,8 @@ public class BlogProvider {
     @PostMapping("/blog/add")
     public Result addBlog(@RequestBody Blog blog)
     {
+        blog.setBlogCreattime(new Date());
+        blog.setBlogUpdatetime(new Date());
         Blog res = blogService.insert(blog);
         if(res==null)
         {
@@ -52,6 +55,7 @@ public class BlogProvider {
     @PostMapping("/blog/update")
     public Result updateBlog(@RequestBody Blog blog)
     {
+        blog.setBlogUpdatetime(new Date());
         Blog res=blogService.update(blog);
         if(res==null)
         {
@@ -132,12 +136,17 @@ public class BlogProvider {
     {
         if(id==-1)
         {
-            return ResultFactory.buildSuccessResult(blogService.queryAll());
+            List<Blog> temp = blogService.queryAll();
+            PageHelper.startPage(pageNum,pageSize);
+            PageInfo<Blog> pageInfo =new PageInfo<>(temp);
+            return ResultFactory.buildSuccessResult(pageInfo);
+
         }
         PageHelper.startPage(pageNum,pageSize);
         Blog blog=new Blog();
         blog.setBlogKind(id);
         List<Blog> blogs = blogService.queryAllByItem(blog);
+
         PageInfo<Blog> pageInfo =new PageInfo<>(blogs);
         return ResultFactory.buildSuccessResult(pageInfo);
 
@@ -157,5 +166,14 @@ public class BlogProvider {
             return ResultFactory.buildSuccessResult(null);
         }
         return ResultFactory.buildFailResult("删除失败");
+    }
+
+    @GetMapping("/blog/search")
+    public Result search(@PathParam("keyword") String keyword, @PathParam("pageNum") int pageNum, @PathParam("pageSize") int pageSize)
+    {
+        List<Blog> blogs = blogService.queryByKeyWord(keyword);
+        PageHelper.startPage(pageNum,pageSize);
+        PageInfo<Blog> pageInfo =new PageInfo<>(blogs);
+        return ResultFactory.buildSuccessResult(pageInfo);
     }
 }

@@ -2,6 +2,7 @@ package com.test.controller;
 
 import com.test.entity.Like;
 import com.test.service.LikeService;
+import com.test.utils.ListUtis;
 import com.test.utils.Result;
 import com.test.utils.ResultCode;
 import com.test.utils.ResultFactory;
@@ -24,46 +25,28 @@ public class LikeProvider {
     @Autowired
     LikeService likeService;
 
-    /**
-     * description: 用户点赞
-     *
-     * @param like
-     * @return com.test.utils.Result
-     */
-    @PostMapping("/like/add")
-    public Result addLike(@RequestBody Like like)
-    {
-        Like res = likeService.insert(like);
-        if(res==null)
-        {
-            return ResultFactory.buildFailResult("新增博文失败");
-        }
-        return ResultFactory.buildSuccessResult(res);
-    }
 
     /**
-     * description: 取消点赞
+     * description: 改变点赞状态
      *
      * @param blogId 博文ID
      * @param userId  用户ID
      * @return com.test.utils.Result
      */
-    @GetMapping("/like/delete")
-    public Result deleteLike(@PathParam("blogId") int blogId, @PathParam("userId") int userId)
+    @GetMapping("/like/change")
+    public Result deleteLike(@PathParam("blogId") Integer blogId, @PathParam("userId") Integer userId)
     {
         Like like=new Like();
         like.setLikeBlog(blogId);
         like.setLikeUser(userId);
         List<Like> likes = likeService.queryAllByItem(like);
-        if(likes==null||likes.size()==0)
+        if(ListUtis.isNotNullEmpty(likes))
         {
-            return ResultFactory.buildFailResult("已取消点赞");
+            Like tep = likes.get(0);
+            return ResultFactory.buildSuccessResult(likeService.deleteById(tep.getLikeId()));
         }
-        if(likeService.deleteById(likes.get(0).getLikeId()))
-        {
-            return ResultFactory.buildSuccessResult(null);
-        }
-        return ResultFactory.buildFailResult("取消点赞失败");
+
+        return ResultFactory.buildSuccessResult(likeService.insert(like));
     }
 
     /**
@@ -74,17 +57,17 @@ public class LikeProvider {
      * @return com.test.utils.Result
      */
     @GetMapping("/like/check")
-    public Result checkLike(@PathParam("blogId") int blogId, @PathParam("userId") int userId)
+    public Result checkLike(@PathParam("blogId") Integer blogId, @PathParam("userId") Integer userId)
     {
         Like like=new Like();
         like.setLikeBlog(blogId);
         like.setLikeUser(userId);
         List<Like> likes = likeService.queryAllByItem(like);
-        if(likes==null||likes.size()==0)
+        if(ListUtis.isNotNullEmpty(likes))
         {
-            return ResultFactory.buildResult(ResultCode.SUCCESS,"not",null);
+            return ResultFactory.buildResult(ResultCode.SUCCESS,"have",null);
         }
-        return ResultFactory.buildResult(ResultCode.SUCCESS,"have",null);
+        return ResultFactory.buildResult(ResultCode.FAIL,"not",null);
     }
 
     /**

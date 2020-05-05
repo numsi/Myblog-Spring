@@ -3,10 +3,7 @@ package com.test.controller;
 import com.test.entity.Like;
 import com.test.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import javax.websocket.server.PathParam;
@@ -26,29 +23,19 @@ public class LikeController {
 
     private static final String REST_URL_PREFIX = "http://localhost:8002";
 
-    /**
-     * description: 用户点赞博文
-     *
-     * @param like
-     * @return com.test.utils.Result
-     */
-    @PostMapping("/like/add")
-    public Result addLike(Like like)
-    {
-        return restTemplate.postForObject(REST_URL_PREFIX+"/like/add",like,Result.class);
-    }
+
 
     /**
-     * description: 用户取消点赞
+     * description: 改变点赞状态
      *
      * @param blogId 博文ID
      * @param userId  用户ID
      * @return com.test.utils.Result
      */
-    @GetMapping("/like/delete")
-    public Result deleteLike(@PathParam("blogId") int blogId, @PathParam("userId") int userId)
+    @GetMapping("/like/change")
+    public Result deleteLike(@PathParam("blogId") Integer blogId, @PathParam("userId") Integer userId)
     {
-        return restTemplate.getForObject(REST_URL_PREFIX+"/like/delete?blogId="+blogId+"&userId="+userId,Result.class);
+        return restTemplate.getForObject(REST_URL_PREFIX+"/like/change?blogId="+blogId+"&userId="+userId,Result.class);
     }
 
     /**
@@ -59,7 +46,7 @@ public class LikeController {
      * @return com.test.utils.Result
      */
     @GetMapping("/like/check")
-    public Result checkLike(@PathParam("blogId") int blogId, @PathParam("userId") int userId)
+    public Result checkLike(@PathParam("blogId") Integer blogId, @PathParam("userId") Integer userId)
     {
         return restTemplate.getForObject(REST_URL_PREFIX+"/like/check?blogId="+blogId+"&userId="+userId,Result.class);
     }

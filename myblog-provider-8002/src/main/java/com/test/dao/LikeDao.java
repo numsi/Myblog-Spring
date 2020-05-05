@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Mapper;
  * (Like)表数据库访问层
  *
  * @author numsi
- * @since 2020-04-29 20:23:15
+ * @since 2020-05-05 10:14:50
  */
   @Mapper
 public interface LikeDao {
@@ -43,7 +43,7 @@ public interface LikeDao {
       /**
      * @Description 查询全部数据
      * @author numsi
-     * @date 2020-04-29 20:23:15
+     * @date 2020-05-05 10:14:50
      * 分页使用MyBatis的插件实现
      * @return 对象列表
      */

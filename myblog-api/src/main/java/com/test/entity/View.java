@@ -6,10 +6,10 @@ import java.io.Serializable;
  * (View)实体类
  *
  * @author numsi
- * @since 2020-04-29 21:55:31
+ * @since 2020-05-05 09:53:05
  */
 public class View implements Serializable {
-    private static final long serialVersionUID = 277003159969918237L;
+    private static final long serialVersionUID = -57693480902774444L;
     /**
     * 阅读id
     */

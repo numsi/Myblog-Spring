@@ -31,7 +31,7 @@ public class KindController {
      * @return com.test.utils.Result
      */
     @PostMapping("/kind/add")
-    public Result addKind( Kind kind)
+    public Result addKind(@RequestBody  Kind kind)
     {
         return restTemplate.postForObject(REST_URL_PREFIX+"/kind/add",kind,Result.class);
     }
@@ -43,7 +43,7 @@ public class KindController {
      * @return com.test.utils.Result
      */
     @PostMapping("/kind/update")
-    public Result updateKind(Kind kind)
+    public Result updateKind(@RequestBody Kind kind)
     {
         return restTemplate.postForObject(REST_URL_PREFIX+"/kind/update",kind,Result.class);
     }

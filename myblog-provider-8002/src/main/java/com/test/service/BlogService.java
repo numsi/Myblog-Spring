@@ -69,4 +69,6 @@ public interface BlogService {
      */
     List<Blog> queryAllByItem(Blog blog);
 
+    List<Blog> queryByKeyWord(String keyword);
+
 }

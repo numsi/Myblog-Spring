@@ -1,12 +1,10 @@
 package com.test.controller;
 
+import com.test.entity.Blog;
 import com.test.entity.Tag;
 import com.test.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import javax.websocket.server.PathParam;
@@ -33,7 +31,7 @@ public class TagController {
      * @return com.test.utils.Result
      */
     @PostMapping("/tag/add")
-    public Result addTas(Tag tag)
+    public Result addTas(@RequestBody Tag tag)
     {
         return restTemplate.postForObject(REST_URL_PREFIX+"/tag/add",tag,Result.class);
     }
@@ -62,6 +60,7 @@ public class TagController {
     @GetMapping("/tag/delete/{id}")
     public Result deleteTag(@PathVariable("id") int id)
     {
+
         return restTemplate.getForObject(REST_URL_PREFIX+"/tag/delete/"+id,Result.class);
     }
 
@@ -72,7 +71,7 @@ public class TagController {
      * @return com.test.utils.Result
      */
     @PostMapping("/tag/update")
-    public Result updateTag(Tag tag)
+    public Result updateTag(@RequestBody Tag tag)
     {
         return restTemplate.postForObject(REST_URL_PREFIX+"/tag/update",tag,Result.class);
     }

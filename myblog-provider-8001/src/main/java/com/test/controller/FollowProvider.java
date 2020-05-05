@@ -5,7 +5,9 @@ import com.github.pagehelper.PageInfo;
 import com.test.entity.Follow;
 import com.test.entity.User;
 import com.test.service.FollowService;
+import com.test.utils.ListUtis;
 import com.test.utils.Result;
+import com.test.utils.ResultCode;
 import com.test.utils.ResultFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -26,22 +28,6 @@ public class FollowProvider {
     @Autowired
     FollowService followService;
 
-    /**
-     * description: 添加关注
-     *
-     * @param follow
-     * @return com.test.utils.Result
-     */
-    @PostMapping("/follow/add")
-    public Result followAdd(@RequestBody Follow follow)
-    {
-        Follow res = followService.insert(follow);
-        if(res==null)
-        {
-            return ResultFactory.buildFailResult("关注失败");
-        }
-        return ResultFactory.buildSuccessResult(res);
-    }
 
     /**
      * description:  根据用户ID获取关注列表
@@ -62,28 +48,87 @@ public class FollowProvider {
 
 
     /**
-     * description: 以用户ID与被关注者ID被参数  删除这条记录
+     * description: 改变关注状态
      *
      * @param userid 用户ID
      * @param followed  被关注者ID
      * @return com.test.utils.Result
      */
-    @GetMapping("/follow/delete")
-    public Result deleteUser(@PathParam("user") int user, @PathParam("followed") int followed)
+    @GetMapping("/follow/change")
+    public Result deleteUser(@PathParam("uid") int uid, @PathParam("followed") int followed)
     {
         Follow follow =new Follow();
-        follow.setFollowFanid(user);
+        follow.setFollowFanid(uid);
         follow.setFollowFollowerid(followed);
         List<Follow> follows=followService.queryAllByItem(follow);
-        if(follows==null)
+        if(ListUtis.isNotNullEmpty(follows))
         {
-            return ResultFactory.buildFailResult("删除失败，请稍后再试");
+            Follow temp = follows.get(0);
+
+            return ResultFactory.buildSuccessResult(followService.deleteById(temp.getFollowId()));
         }
-        if(followService.deleteById(follows.get(0).getFollowId()))
+
+        return ResultFactory.buildSuccessResult(followService.insert(follow));
+    }
+
+    /**
+     * description: 检查是否已关注
+     *
+     * @param user
+     * @param followed
+     * @return com.test.utils.Result
+     */
+    @GetMapping("/follow/check")
+    public Result checkFollow(@PathParam("uid") int uid, @PathParam("followed") int followed)
+    {
+        Follow follow =new Follow();
+        follow.setFollowFanid(uid);
+        follow.setFollowFollowerid(followed);
+        List<Follow> follows=followService.queryAllByItem(follow);
+        if(ListUtis.isNotNullEmpty(follows))
         {
-            return ResultFactory.buildSuccessResult(null);
+            return ResultFactory.buildResult(ResultCode.SUCCESS,"have",null);
         }
-        return ResultFactory.buildFailResult("删除失败，请稍后再试");
+        return ResultFactory.buildResult(ResultCode.FAIL,"not",null);
+    }
+
+
+    /**
+     * description: 获取粉丝数
+     *
+     * @param id
+     * @return com.test.utils.Result
+     */
+    @GetMapping("/follow/getFanNum/{id}")
+    public Result getFanNum(@PathVariable("id") int id)
+    {
+        Follow follow =new Follow();
+        follow.setFollowFollowerid(id);
+        List<Follow> follows = followService.queryAllByItem(follow);
+        if(ListUtis.isNotNullEmpty(follows))
+        {
+            return ResultFactory.buildSuccessResult(follows.size());
+        }
+        return ResultFactory.buildSuccessResult(0);
+    }
+
+    /**
+     * description: 获取关注数
+     *
+     * @param id
+     * @return com.test.utils.Result
+     */
+    @GetMapping("/follow/getFollowNum/{id}")
+    public Result getFollowNum(@PathVariable("id") int id)
+    {
+        Follow follow =new Follow();
+        follow.setFollowFanid(id);
+        List<Follow> follows = followService.queryAllByItem(follow);
+        if(ListUtis.isNotNullEmpty(follows))
+        {
+            return ResultFactory.buildSuccessResult(follows.size());
+        }
+        return ResultFactory.buildSuccessResult(0);
     }
 
 }

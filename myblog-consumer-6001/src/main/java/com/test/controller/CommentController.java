@@ -3,10 +3,7 @@ package com.test.controller;
 import com.test.entity.Comment;
 import com.test.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import javax.websocket.server.PathParam;
@@ -33,7 +30,7 @@ public class CommentController {
      * @return com.test.utils.Result
      */
     @PostMapping("/comment/add")
-    public Result addBlog(Comment comment)
+    public Result addBlog(@RequestBody Comment comment)
     {
         return restTemplate.postForObject(REST_URL_PREFIX+"/comment/add",comment,Result.class);
     }
@@ -45,7 +42,7 @@ public class CommentController {
      * @return com.test.utils.Result
      */
     @PostMapping("/comment/update")
-    public Result updateBlog(Comment comment)
+    public Result updateBlog(@RequestBody Comment comment)
     {
         return restTemplate.postForObject(REST_URL_PREFIX+"/comment/update",comment,Result.class);
     }
@@ -100,6 +97,12 @@ public class CommentController {
     public Result deleteComment(@PathVariable("id") int id)
     {
         return restTemplate.getForObject(REST_URL_PREFIX+"/comment/delete/"+id,Result.class);
+    }
+
+    @GetMapping("/comment/getBlog/{id}")
+    public Result getBlog(@PathVariable("id") int id)
+    {
+        return restTemplate.getForObject(REST_URL_PREFIX+"/comment/getBlog/"+id,Result.class);
     }
 
 }

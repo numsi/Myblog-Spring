@@ -1180,6 +1180,7 @@
       <Comment>点赞id</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="290" parent="250" name="like_blog">
@@ -1204,6 +1205,7 @@
       <Comment>通知id</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="294" parent="251" name="notice_content">
@@ -1290,13 +1292,13 @@
     </column>
     <column id="307" parent="253" name="user_gender">
       <Position>6</Position>
-      <Comment>用户性别 0：未知 1：男 2：女</Comment>
+      <Comment>用户性别 0：男 1：女   null为未知</Comment>
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="308" parent="253" name="user_birth">
+    <column id="308" parent="253" name="user_phone">
       <Position>7</Position>
-      <Comment>用户生日</Comment>
+      <Comment>用户手机号</Comment>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -1334,6 +1336,7 @@
       <Comment>阅读id</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="315" parent="254" name="view_blog">

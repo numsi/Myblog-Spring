@@ -1,24 +1,15 @@
 package com.test.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.experimental.Accessors;
-
 import java.io.Serializable;
 
 /**
  * (Follow)实体类
  *
  * @author numsi
- * @since 2020-04-25 19:28:34
+ * @since 2020-05-05 11:36:51
  */
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Accessors(chain = true)//链式写法
 public class Follow implements Serializable {
-    private static final long serialVersionUID = 802583304718735682L;
+    private static final long serialVersionUID = -18863248026534463L;
     /**
     * 关注id
     */
@@ -33,6 +24,28 @@ public class Follow implements Serializable {
     private Integer followFanid;
 
 
+    public Integer getFollowId() {
+        return followId;
+    }
 
+    public void setFollowId(Integer followId) {
+        this.followId = followId;
+    }
+
+    public Integer getFollowFollowerid() {
+        return followFollowerid;
+    }
+
+    public void setFollowFollowerid(Integer followFollowerid) {
+        this.followFollowerid = followFollowerid;
+    }
+
+    public Integer getFollowFanid() {
+        return followFanid;
+    }
+
+    public void setFollowFanid(Integer followFanid) {
+        this.followFanid = followFanid;
+    }
 
 }

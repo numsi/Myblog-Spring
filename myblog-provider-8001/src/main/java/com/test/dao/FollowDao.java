@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Mapper;
  * (Follow)表数据库访问层
  *
  * @author numsi
- * @since 2020-04-28 19:23:23
+ * @since 2020-05-05 11:37:09
  */
   @Mapper
 public interface FollowDao {
@@ -43,7 +43,7 @@ public interface FollowDao {
       /**
      * @Description 查询全部数据
      * @author numsi
-     * @date 2020-04-28 19:23:23
+     * @date 2020-05-05 11:37:09
      * 分页使用MyBatis的插件实现
      * @return 对象列表
      */

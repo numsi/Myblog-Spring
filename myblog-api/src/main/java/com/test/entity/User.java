@@ -7,10 +7,10 @@ import java.io.Serializable;
  * (User)实体类
  *
  * @author numsi
- * @since 2020-04-27 19:55:55
+ * @since 2020-05-04 23:06:13
  */
 public class User implements Serializable {
-    private static final long serialVersionUID = 734257115033368407L;
+    private static final long serialVersionUID = -74021166383622355L;
     /**
     * 用户ID
     */
@@ -32,13 +32,13 @@ public class User implements Serializable {
     */
     private Date userCreattime;
     /**
-    * 用户性别 0：未知 1：男 2：女
+    * 用户性别 0：男 1：女   null为未知
     */
     private Integer userGender;
     /**
-    * 用户生日
+    * 用户手机号
     */
-    private String userBirth;
+    private String userPhone;
     /**
     * 用户email
     */
@@ -105,12 +105,12 @@ public class User implements Serializable {
         this.userGender = userGender;
     }
 
-    public String getUserBirth() {
-        return userBirth;
+    public String getUserPhone() {
+        return userPhone;
     }
 
-    public void setUserBirth(String userBirth) {
-        this.userBirth = userBirth;
+    public void setUserPhone(String userPhone) {
+        this.userPhone = userPhone;
     }
 
     public String getUserEmail() {

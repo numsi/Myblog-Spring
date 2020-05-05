@@ -18,6 +18,9 @@ spring:
     url: jdbc:mysql://localhost:3306/myblog?useUnicode=true&characterEncoding=utf-8
     username: root
     password: 123456
+  jackson:
+    date-format: yyyy-MM-dd
+    time-zone: GMT+8
 
 
 #Eureka配置   服务注册到哪里

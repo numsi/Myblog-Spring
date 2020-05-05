@@ -2,6 +2,7 @@ package com.test.controller;
 
 import com.test.entity.View;
 import com.test.service.ViewService;
+import com.test.utils.ListUtis;
 import com.test.utils.Result;
 import com.test.utils.ResultFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,12 +32,38 @@ public class ViewProvider {
     @PostMapping("/view/add")
     public Result addView(@RequestBody View view)
     {
-        View res = viewService.insert(view);
-        if(res==null)
+        List<View> views = viewService.queryAllByItem(view);
+        if(ListUtis.isNotNullEmpty(views))
         {
-            return ResultFactory.buildFailResult("已阅读");
+            return ResultFactory.buildSuccessResult("");
         }
-        return ResultFactory.buildSuccessResult(null);
+        return ResultFactory.buildSuccessResult(viewService.insert(view));
+    }
+
+    @GetMapping("/view/get/{id}")
+    public Result getView(@PathVariable("id") int id)
+    {
+        View view=new View();
+        view.setViewBlog(id);
+        List<View> views = viewService.queryAllByItem(view);
+        if(ListUtis.isNotNullEmpty(views))
+        {
+            return ResultFactory.buildSuccessResult(views.size());
+        }
+        return ResultFactory.buildSuccessResult(0);
+    }
+
+    @GetMapping("/view/getByUser/{id}")
+    public Result getViewByUser(@PathVariable("id") int id)
+    {
+        View view=new View();
+        view.setViewUser(id);
+        List<View> views = viewService.queryAllByItem(view);
+        if(ListUtis.isNotNullEmpty(views))
+        {
+            return ResultFactory.buildSuccessResult(views.size());
+        }
+        return ResultFactory.buildSuccessResult(0);
     }
 
 

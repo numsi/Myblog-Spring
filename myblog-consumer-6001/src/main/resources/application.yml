@@ -9,3 +9,7 @@ eureka:
     service-url:
       defaultZone: http://localhost:7001/eureka/
 #      defaultZone: http://localhost:7003/eureka/,http://localhost:7001/eureka/,http://localhost:7002/eureka/
+
+
+file:
+  uploadFolder: F:/myBlog/img # 上传保存地址

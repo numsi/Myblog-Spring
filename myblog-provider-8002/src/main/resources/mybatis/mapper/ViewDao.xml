@@ -6,13 +6,13 @@
         <!--@Table view-->
         <result property="viewId" column="view_id" jdbcType="INTEGER"/>
         <result property="viewBlog" column="view_blog" jdbcType="INTEGER"/>
-        <result property="viewUsername" column="view_username" jdbcType="VARCHAR"/>
+        <result property="viewUser" column="view_user" jdbcType="INTEGER"/>
     </resultMap>
 
     <!--查询单个-->
     <select id="queryById" resultMap="BaseResultMap">
         select
-          view_id, view_blog, view_username
+          view_id, view_blog, view_user
         from myblog.view
         where view_id = #{viewId}
     </select>
@@ -20,7 +20,7 @@
     <!--查询指定行数据-->
     <select id="queryAllByLimit" resultMap="BaseResultMap">
         select
-          view_id, view_blog, view_username
+          view_id, view_blog, view_user
         from myblog.view
         limit #{offset}, #{limit}
     </select>
@@ -28,7 +28,7 @@
     <!--通过实体作为筛选条件查询-->
     <select id="queryAllByItem" resultMap="BaseResultMap">
         select
-          view_id, view_blog, view_username
+          view_id, view_blog, view_user
         from myblog.view
         <where>
             <if test="viewId != null">
@@ -37,16 +37,16 @@
             <if test="viewBlog != null">
                 and view_blog = #{viewBlog}
             </if>
-            <if test="viewUsername != null and viewUsername != ''">
-                and view_username = #{viewUsername}
+            <if test="viewUser != null">
+                and view_user = #{viewUser}
             </if>
         </where>
     </select>
 
     <!--新增所有列-->
     <insert id="insert" keyProperty="viewId" useGeneratedKeys="true">
-        insert into myblog.view(view_blog, view_username)
-        values (#{viewBlog}, #{viewUsername})
+        insert into myblog.view(view_blog, view_user)
+        values (#{viewBlog}, #{viewUser})
     </insert>
 
     <!--通过主键修改数据-->
@@ -56,8 +56,8 @@
             <if test="viewBlog != null">
                 view_blog = #{viewBlog},
             </if>
-            <if test="viewUsername != null and viewUsername != ''">
-                view_username = #{viewUsername},
+            <if test="viewUser != null">
+                view_user = #{viewUser},
             </if>
         </set>
         where view_id = #{viewId}
@@ -70,6 +70,6 @@
      <!--查询所有view-->
     <select id="queryAll" resultMap="BaseResultMap">
         select
-        view_id, view_blog, view_username        from view
+        view_id, view_blog, view_user        from view
     </select>
 </mapper>
