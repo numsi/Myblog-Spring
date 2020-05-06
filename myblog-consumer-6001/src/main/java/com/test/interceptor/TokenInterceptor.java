@@ -28,15 +28,18 @@ public class TokenInterceptor implements HandlerInterceptor {
         }
         response.setCharacterEncoding("UTF-8");
         response.setContentType("application/json; charset=utf-8");
+        response.setHeader("Access-Control-Allow-Credentials", "true");
+        response.setHeader("Access-Control-Allow-Origin",request.getHeader("Origin"));
         try{
             JSONObject json = new JSONObject();
-            json.put("msg","token verify fail");
-            json.put("codeT","666");
+            json.put("message","token verify fail");
+            json.put("code","666");
+            json.put("result","");
             response.getWriter().append(json.toJSONString());
             System.out.println("认证失败，未通过拦截器");
         }catch (Exception e){
             e.printStackTrace();
-            response.sendError(500);
+            response.sendError(666);
             return false;
         }
         return false;

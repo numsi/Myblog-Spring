@@ -135,7 +135,7 @@ public class CommentProvider {
     {
         Comment comment = commentService.queryById(id);
         comment.setCommentContent("评论已被删除");
-        comment.setCommentAuthor(null);
+        comment.setCommentAuthor(-1);
         Comment res = commentService.update(comment);
         if(res==null)
         {

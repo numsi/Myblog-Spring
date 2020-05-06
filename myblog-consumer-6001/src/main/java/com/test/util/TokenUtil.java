@@ -10,7 +10,7 @@ import java.util.Date;
 
 public class TokenUtil {
 
-//    private static final long EXPIRE_TIME= 10*60*60*1000;
+    private static final long EXPIRE_TIME= 10*60*60*1000;
 //    private static final long EXPIRE_TIME= 10;
     private static final String TOKEN_SECRET="txdy";  //密钥盐
 
@@ -22,11 +22,11 @@ public class TokenUtil {
     public static String sign(User user){
         String token = null;
         try {
-//            Date expiresAt = new Date(System.currentTimeMillis() + EXPIRE_TIME);
+            Date expiresAt = new Date(System.currentTimeMillis() + EXPIRE_TIME);
             token = JWT.create()
                     .withIssuer("auth0")
                     .withClaim("username", user.getUserUsername())
-//                    .withExpiresAt(expiresAt)
+                    .withExpiresAt(expiresAt)
                     // 使用了HMAC256加密算法。
                     .sign(Algorithm.HMAC256(TOKEN_SECRET));
         } catch (Exception e){

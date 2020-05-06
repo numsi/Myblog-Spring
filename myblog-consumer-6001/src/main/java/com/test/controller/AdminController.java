@@ -1,13 +1,20 @@
 package com.test.controller;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.test.entity.Admin;
+import com.test.entity.User;
+import com.test.util.TokenUtil;
 import com.test.utils.Result;
+import com.test.utils.ResultFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.HashMap;
 
 /**
  * @author numsi
@@ -43,7 +50,22 @@ public class AdminController {
      */
     @PostMapping("/admin/login")
     public Result adminLogin(@RequestBody Admin admin)
-    {return restTemplate.postForObject(REST_URL_PREFIX+"/admin/login",admin,Result.class);
+    {
+        Result result = restTemplate.postForObject(REST_URL_PREFIX+"/admin/login",admin,Result.class);
+        if(result.getCode() == 200){
+            Admin temp = JSONObject.parseObject(JSONArray.toJSONString(result.getResult()), Admin.class);
+//            User temp = (User)result.getResult();
+            User user = new User();
+            user.setUserId(-1);
+            user.setUserUsername("admin");
+            String token = TokenUtil.sign(user);
+            HashMap<String,Object> hs=new HashMap<>();
+            hs.put("token",token);
+            hs.put("user",user);
+            return ResultFactory.buildSuccessResult(hs);
+        }else{
+            return result;
+        }
     }
 
     /**

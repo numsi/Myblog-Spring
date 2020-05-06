@@ -21,13 +21,13 @@ import java.util.concurrent.Executors;
 @Configuration
 public class WebConfiguration implements WebMvcConfigurer {
 
-//    private TokenInterceptor tokenInterceptor;
-//
-//    //构造方法
-//    public WebConfiguration(TokenInterceptor tokenInterceptor){
-//        this.tokenInterceptor = tokenInterceptor;
-//    }
-//
+    private TokenInterceptor tokenInterceptor;
+
+    //构造方法
+    public WebConfiguration(TokenInterceptor tokenInterceptor){
+        this.tokenInterceptor = tokenInterceptor;
+    }
+
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
@@ -36,30 +36,32 @@ public class WebConfiguration implements WebMvcConfigurer {
                 .allowedMethods("*")
                 .allowedOrigins("*");
     }
-//
-//    @Override
-//    public void configureAsyncSupport(AsyncSupportConfigurer configurer){
-//        configurer.setTaskExecutor(new ConcurrentTaskExecutor(Executors.newFixedThreadPool(3)));
-//        configurer.setDefaultTimeout(30000);
-//    }
-//
-//    @Override
-//    public void addInterceptors(InterceptorRegistry registry){
-//        List<String> excludePath = new ArrayList<>();
-//        //排除拦截
-//        excludePath.add("/user/add");  //登录
-//        excludePath.add("/user/login");     //注册
-//        excludePath.add("/img/**");  //静态资源
-//        excludePath.add("/kind/list");
-//        excludePath.add("/blog/listByKind");
-//        excludePath.add("/view/get/*");
-//        excludePath.add("/like/getBlog//*");
-//        excludePath.add("/comment/getBlog/*");
-////        excludePath.add("/assets/**");  //静态资源
-//
-//        registry.addInterceptor(tokenInterceptor)
-//                .addPathPatterns("/**")
-//                .excludePathPatterns(excludePath);
-//        WebMvcConfigurer.super.addInterceptors(registry);
-//    }
+
+    @Override
+    public void configureAsyncSupport(AsyncSupportConfigurer configurer){
+        configurer.setTaskExecutor(new ConcurrentTaskExecutor(Executors.newFixedThreadPool(3)));
+        configurer.setDefaultTimeout(30000);
+    }
+
+    @Override
+    public void addInterceptors(InterceptorRegistry registry){
+        List<String> excludePath = new ArrayList<>();
+        //排除拦截
+        excludePath.add("/user/add");  //注册
+        excludePath.add("/user/login");     //登录
+        excludePath.add("/img/**");  //静态资源
+        excludePath.add("/admin/login");     //登录
+        excludePath.add("/kind/list");
+        excludePath.add("/blog/listByKind");
+        excludePath.add("/user/get/*");
+        excludePath.add("/view/get/*");
+        excludePath.add("/like/getBlog//*");
+        excludePath.add("/comment/getBlog/*");
+//        excludePath.add("/assets/**");  //静态资源
+
+        registry.addInterceptor(tokenInterceptor)
+                .addPathPatterns("/**")
+                .excludePathPatterns(excludePath);
+        WebMvcConfigurer.super.addInterceptors(registry);
+    }
 }
