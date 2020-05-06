@@ -53,6 +53,7 @@ public class AdminProvider {
     @PostMapping("/admin/update")
     public Result adminUpdate(@RequestBody Admin admin)
     {
+        admin.setAdminId(1);
         Admin res = adminService.update(admin);
         if(res==null)
         {
